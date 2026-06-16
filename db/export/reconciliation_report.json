@@ -1,0 +1,175 @@
+{
+  "generated_at": "2026-06-16T01:45:51",
+  "roster_source": "db/sources/knpa_roster_sample.csv",
+  "roster_rows": 18,
+  "matched": [
+    {
+      "name": "김현수",
+      "specialist_id": "psy001",
+      "method": "deterministic:board_cert_no",
+      "school": "서울대학교",
+      "grad_year": 1998,
+      "changes": {}
+    },
+    {
+      "name": "이정민",
+      "specialist_id": "psy002",
+      "method": "deterministic:board_cert_no",
+      "school": "연세대학교",
+      "grad_year": 2003,
+      "changes": {}
+    },
+    {
+      "name": "박서진",
+      "specialist_id": "psy003",
+      "method": "deterministic:board_cert_no",
+      "school": "성균관대학교",
+      "grad_year": 2008,
+      "changes": {}
+    },
+    {
+      "name": "정유나",
+      "specialist_id": "psy004",
+      "method": "deterministic:board_cert_no",
+      "school": "가톨릭대학교",
+      "grad_year": 2002,
+      "changes": {}
+    },
+    {
+      "name": "한지호",
+      "specialist_id": "psy005",
+      "method": "deterministic:board_cert_no",
+      "school": "한양대학교",
+      "grad_year": 2007,
+      "changes": {}
+    },
+    {
+      "name": "오하늘",
+      "specialist_id": "psy006",
+      "method": "deterministic:board_cert_no",
+      "school": "이화여자대학교",
+      "grad_year": 2009,
+      "changes": {}
+    },
+    {
+      "name": "신동욱",
+      "specialist_id": "psy007",
+      "method": "deterministic:board_cert_no",
+      "school": "중앙대학교",
+      "grad_year": 2001,
+      "changes": {}
+    },
+    {
+      "name": "윤소희",
+      "specialist_id": "psy008",
+      "method": "deterministic:board_cert_no",
+      "school": "고려대학교",
+      "grad_year": 2010,
+      "changes": {}
+    },
+    {
+      "name": "강민재",
+      "specialist_id": "psy009",
+      "method": "deterministic:board_cert_no",
+      "school": "울산대학교",
+      "grad_year": 2004,
+      "changes": {}
+    },
+    {
+      "name": "임가은",
+      "specialist_id": "psy010",
+      "method": "deterministic:board_cert_no",
+      "school": "경희대학교",
+      "grad_year": 2011,
+      "changes": {}
+    },
+    {
+      "name": "조은별",
+      "specialist_id": "psy011",
+      "method": "deterministic:board_cert_no",
+      "school": "인하대학교",
+      "grad_year": 2009,
+      "changes": {}
+    },
+    {
+      "name": "문채원",
+      "specialist_id": "psy012",
+      "method": "deterministic:board_cert_no",
+      "school": "건국대학교",
+      "grad_year": 2005,
+      "changes": {}
+    },
+    {
+      "name": "배수민",
+      "specialist_id": "psy013",
+      "method": "deterministic:board_cert_no",
+      "school": "부산대학교",
+      "grad_year": 2008,
+      "changes": {}
+    },
+    {
+      "name": "서지안",
+      "specialist_id": "psy014",
+      "method": "deterministic:board_cert_no",
+      "school": "아주대학교",
+      "grad_year": 2003,
+      "changes": {}
+    }
+  ],
+  "new_specialists": [
+    {
+      "id": "knpa_001",
+      "name": "김태영",
+      "school": "서울대학교",
+      "grad_year": 2002,
+      "affiliation": "서울행복정신건강의학과의원",
+      "hospital_matched": false,
+      "homonym": false
+    },
+    {
+      "id": "knpa_002",
+      "name": "이수진",
+      "school": "연세대학교",
+      "grad_year": 2008,
+      "affiliation": "마포평온정신건강의학과병원",
+      "hospital_matched": false,
+      "homonym": false
+    },
+    {
+      "id": "knpa_003",
+      "name": "박민호",
+      "school": "고려대학교",
+      "grad_year": 1999,
+      "affiliation": "한빛정신건강의학과의원",
+      "hospital_matched": false,
+      "homonym": true
+    },
+    {
+      "id": "knpa_004",
+      "name": "박민호",
+      "school": "부산대학교",
+      "grad_year": 2012,
+      "affiliation": "동래마음정신건강의학과의원",
+      "hospital_matched": false,
+      "homonym": true
+    }
+  ],
+  "homonyms": [
+    {
+      "name": "박민호",
+      "count": 2,
+      "distinguished_by": [
+        "고려대학교/1999/서울 영등포",
+        "부산대학교/2012/부산 동래"
+      ]
+    }
+  ],
+  "unmatched": [],
+  "summary": {
+    "matched": 14,
+    "fields_updated": 0,
+    "new_specialists": 4,
+    "homonym_groups": 1,
+    "total_specialists_after": 18
+  }
+}

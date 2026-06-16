@@ -60,6 +60,40 @@ python3 db/scripts/ingest_specialists.py --db db/clinicsearch.db \
         --pubmed "김현수" --affil "psychiatry" --specialist-id psy001
 ```
 
+### 수집 → 정합(Entity Resolution) 워크플로
+
+학회명부/공공데이터에서 전문의를 **수집**한 뒤, 기존 통합 DB와 **정합**(매칭·병합·중복제거)합니다.
+
+```bash
+# 1) 기본 DB 생성(시드)
+python3 db/build_db.py
+
+# 2) 수집: 학회명부/공공데이터 → 표준 명부 CSV
+#    온라인(네트워크+키): KNPA 디렉터리/data.go.kr 호출
+DATA_GO_KR_KEY=발급키 python3 db/scripts/collect_knpa.py --out db/sources/knpa_roster.csv
+#    오프라인: 준비된 명부 CSV 스키마/중복/결측 검증
+python3 db/scripts/collect_knpa.py --validate db/sources/knpa_roster_sample.csv
+
+# 3) 정합: 명부 ↔ 통합 DB 매칭/병합 + 출처 기록 + 앱 산출물 재생성
+python3 db/scripts/reconcile.py --roster db/sources/knpa_roster_sample.csv
+```
+
+**정합 규칙**
+1. 결정적 매칭 — 전문의자격번호 또는 면허번호 일치 → 동일인
+2. 확률적 매칭 — (정규화 이름)+(정규화 졸업대학)+(졸업연도 ±1) 일치 → 동일인
+3. 동명이인 — 이름이 같아도 졸업대학/연도가 다르면 별개 인물로 분리
+4. 권위 우선 — 학회명부의 자격/면허가 시드 예시값을 갱신하고 `data_source`에 출처 기록
+
+> 표준 명부 CSV 스키마: `성명,성별,전문의자격번호,면허번호,졸업대학,졸업연도,수련병원,현소속기관,지역,세부전공`
+> 동명이인 정합 정확도를 위해 (이름+졸업대학+졸업연도+소속기관/면허번호)를 함께 사용합니다.
+
+**정합 결과(샘플 명부 18건 기준):** 매칭·갱신 14명(필드 28건), 신규 4명, 동명이인 1그룹(박민호 2명 분리),
+총 18명 → 상세 리포트는 `db/export/reconciliation_report.json`.
+
+> ⚠️ 현 실행 환경은 아웃바운드 네트워크가 차단(403)되어 라이브 수집은 불가합니다.
+> 동봉한 `db/sources/knpa_roster_sample.csv`(실제 명부 스키마)로 정합을 즉시 재현할 수 있으며,
+> 네트워크·키가 있는 환경에서 `collect_knpa.py`가 동일 스키마로 라이브 수집합니다.
+
 > 동명이인 구분을 위해 (이름 + 면허번호/소속기관 + 졸업학교)로 엔티티를 정합합니다.
 > 모든 수집은 출처별 이용약관·로봇정책·개인정보 보호를 준수해야 합니다.
 > 현재 시드의 면허/자격번호는 예시값이며, 실데이터로 교체해야 합니다.

@@ -543,6 +543,278 @@ const HOSPITALS = [
 
 const SPECIALISTS = [
   {
+    "id": "knpa_001",
+    "name": "김태영",
+    "gender": "M",
+    "hospitalId": null,
+    "subspecialty": "불안·공황장애",
+    "reputation": 0.0,
+    "reviews": 0,
+    "license": {
+      "type": "의사면허",
+      "no": "제51234호",
+      "year": null
+    },
+    "boardCert": {
+      "certNo": "정신건강의학과-2008-000777",
+      "year": 2008,
+      "authority": "대한신경정신의학회/보건복지부"
+    },
+    "education": [
+      {
+        "degree": "의학사",
+        "school": "서울대학교",
+        "year": 2002,
+        "thesis": null
+      }
+    ],
+    "training": [
+      {
+        "role": "레지던트",
+        "hospital": "서울대학교병원",
+        "start_year": 2003,
+        "end_year": 2007
+      }
+    ],
+    "positions": [
+      {
+        "org": "서울행복정신건강의학과의원",
+        "title": "전문의",
+        "start_year": null,
+        "end_year": null,
+        "is_current": 1
+      }
+    ],
+    "societies": [],
+    "publications": [],
+    "certifications": [],
+    "interests": [
+      "불안·공황장애"
+    ],
+    "sources": [
+      {
+        "field": "roster",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 수집·정합",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "affiliation",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "소속기관(병원DB 미등록)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "knpa_002",
+    "name": "이수진",
+    "gender": "F",
+    "hospitalId": null,
+    "subspecialty": "기분장애(우울/조울)",
+    "reputation": 0.0,
+    "reviews": 0,
+    "license": {
+      "type": "의사면허",
+      "no": "제60111호",
+      "year": null
+    },
+    "boardCert": {
+      "certNo": "정신건강의학과-2014-001580",
+      "year": 2014,
+      "authority": "대한신경정신의학회/보건복지부"
+    },
+    "education": [
+      {
+        "degree": "의학사",
+        "school": "연세대학교",
+        "year": 2008,
+        "thesis": null
+      }
+    ],
+    "training": [
+      {
+        "role": "레지던트",
+        "hospital": "세브란스병원",
+        "start_year": 2009,
+        "end_year": 2013
+      }
+    ],
+    "positions": [
+      {
+        "org": "마포평온정신건강의학과병원",
+        "title": "전문의",
+        "start_year": null,
+        "end_year": null,
+        "is_current": 1
+      }
+    ],
+    "societies": [],
+    "publications": [],
+    "certifications": [],
+    "interests": [
+      "기분장애(우울/조울)"
+    ],
+    "sources": [
+      {
+        "field": "roster",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 수집·정합",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "affiliation",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "소속기관(병원DB 미등록)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "knpa_003",
+    "name": "박민호",
+    "gender": "M",
+    "hospitalId": null,
+    "subspecialty": "중독(알코올/도박/게임)",
+    "reputation": 0.0,
+    "reviews": 0,
+    "license": {
+      "type": "의사면허",
+      "no": "제47002호",
+      "year": null
+    },
+    "boardCert": {
+      "certNo": "정신건강의학과-2005-000510",
+      "year": 2005,
+      "authority": "대한신경정신의학회/보건복지부"
+    },
+    "education": [
+      {
+        "degree": "의학사",
+        "school": "고려대학교",
+        "year": 1999,
+        "thesis": null
+      }
+    ],
+    "training": [
+      {
+        "role": "레지던트",
+        "hospital": "고려대학교구로병원",
+        "start_year": 2000,
+        "end_year": 2004
+      }
+    ],
+    "positions": [
+      {
+        "org": "한빛정신건강의학과의원",
+        "title": "전문의",
+        "start_year": null,
+        "end_year": null,
+        "is_current": 1
+      }
+    ],
+    "societies": [],
+    "publications": [],
+    "certifications": [],
+    "interests": [
+      "중독(알코올/도박/게임)"
+    ],
+    "sources": [
+      {
+        "field": "roster",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 수집·정합",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "affiliation",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "소속기관(병원DB 미등록)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "knpa_004",
+    "name": "박민호",
+    "gender": "M",
+    "hospitalId": null,
+    "subspecialty": "조현병·정신증",
+    "reputation": 0.0,
+    "reviews": 0,
+    "license": {
+      "type": "의사면허",
+      "no": "제72540호",
+      "year": null
+    },
+    "boardCert": {
+      "certNo": "정신건강의학과-2018-003220",
+      "year": 2018,
+      "authority": "대한신경정신의학회/보건복지부"
+    },
+    "education": [
+      {
+        "degree": "의학사",
+        "school": "부산대학교",
+        "year": 2012,
+        "thesis": null
+      }
+    ],
+    "training": [
+      {
+        "role": "레지던트",
+        "hospital": "부산대학교병원",
+        "start_year": 2013,
+        "end_year": 2017
+      }
+    ],
+    "positions": [
+      {
+        "org": "동래마음정신건강의학과의원",
+        "title": "전문의",
+        "start_year": null,
+        "end_year": null,
+        "is_current": 1
+      }
+    ],
+    "societies": [],
+    "publications": [],
+    "certifications": [],
+    "interests": [
+      "조현병·정신증"
+    ],
+    "sources": [
+      {
+        "field": "roster",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 수집·정합",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "affiliation",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "소속기관(병원DB 미등록)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
     "id": "psy001",
     "name": "김현수",
     "gender": "M",
@@ -552,13 +824,13 @@ const SPECIALISTS = [
     "reviews": 142,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제45012호",
       "year": 1995
     },
     "boardCert": {
-      "certNo": "정신-2003-0457(예시)",
+      "certNo": "정신건강의학과-2003-000457",
       "year": 2003,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -641,14 +913,6 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
-        "url": "https://www.knpa.or.kr",
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "positions",
         "source": "국립서울정신건강병원 의료진 소개",
         "method": "기관 홈페이지 수집",
@@ -671,6 +935,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "low"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -684,13 +964,13 @@ const SPECIALISTS = [
     "reviews": 188,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제48230호",
       "year": 2000
     },
     "boardCert": {
-      "certNo": "정신-2008-1123(예시)",
+      "certNo": "정신건강의학과-2008-001123",
       "year": 2008,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -770,14 +1050,6 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
-        "url": "https://www.knpa.or.kr",
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "positions",
         "source": "국립서울정신건강병원 의료진 소개",
         "method": "기관 홈페이지 수집",
@@ -792,6 +1064,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -805,13 +1093,13 @@ const SPECIALISTS = [
     "reviews": 264,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제51890호",
       "year": 2005
     },
     "boardCert": {
-      "certNo": "정신-2013-2210(예시)",
+      "certNo": "정신건강의학과-2013-002210",
       "year": 2013,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -888,14 +1176,6 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
-        "url": "https://www.knpa.or.kr",
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "positions",
         "source": "의원 홈페이지 의료진 소개",
         "method": "기관 홈페이지 수집",
@@ -910,6 +1190,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "low"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -923,13 +1219,13 @@ const SPECIALISTS = [
     "reviews": 131,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제44551호",
       "year": 1999
     },
     "boardCert": {
-      "certNo": "정신-2007-0912(예시)",
+      "certNo": "정신건강의학과-2007-000912",
       "year": 2007,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1005,20 +1301,28 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
-        "url": "https://www.knpa.or.kr",
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "publications",
         "source": "PubMed",
         "method": "저자명 검색",
         "url": "https://pubmed.ncbi.nlm.nih.gov",
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1032,13 +1336,13 @@ const SPECIALISTS = [
     "reviews": 97,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제50677호",
       "year": 2004
     },
     "boardCert": {
-      "certNo": "정신-2012-1745(예시)",
+      "certNo": "정신건강의학과-2012-001745",
       "year": 2012,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1091,18 +1395,26 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
+        "field": "positions",
+        "source": "병원 홈페이지 의료진 소개",
+        "method": "기관 홈페이지 수집",
+        "url": null,
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
         "field": "boardCert",
         "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
+        "method": "학회 명부 정합(probabilistic)",
         "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       },
       {
-        "field": "positions",
-        "source": "병원 홈페이지 의료진 소개",
-        "method": "기관 홈페이지 수집",
-        "url": null,
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       }
@@ -1118,13 +1430,13 @@ const SPECIALISTS = [
     "reviews": 203,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제52140호",
       "year": 2006
     },
     "boardCert": {
-      "certNo": "정신-2014-2588(예시)",
+      "certNo": "정신건강의학과-2014-002588",
       "year": 2014,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1194,20 +1506,28 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한소아청소년정신의학회 명부",
-        "method": "학회 명부 조회",
-        "url": null,
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "training",
         "source": "수련기관 전공의 이력",
         "method": "기관 자료 확인",
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1221,13 +1541,13 @@ const SPECIALISTS = [
     "reviews": 116,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제43388호",
       "year": 1998
     },
     "boardCert": {
-      "certNo": "정신-2006-0633(예시)",
+      "certNo": "정신건강의학과-2006-000633",
       "year": 2006,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1301,18 +1621,26 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "한국중독정신의학회 명부",
-        "method": "학회 명부 조회",
+        "field": "positions",
+        "source": "병원 홈페이지",
+        "method": "기관 홈페이지 수집",
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "high"
       },
       {
-        "field": "positions",
-        "source": "병원 홈페이지",
-        "method": "기관 홈페이지 수집",
-        "url": null,
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       }
@@ -1328,13 +1656,13 @@ const SPECIALISTS = [
     "reviews": 158,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제53299호",
       "year": 2007
     },
     "boardCert": {
-      "certNo": "정신-2015-2901(예시)",
+      "certNo": "정신건강의학과-2015-002901",
       "year": 2015,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1404,20 +1732,28 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한수면의학회 명부",
-        "method": "학회 명부 조회",
-        "url": null,
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "publications",
         "source": "KoreaMed",
         "method": "저자명 검색",
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1431,13 +1767,13 @@ const SPECIALISTS = [
     "reviews": 149,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제49112호",
       "year": 2001
     },
     "boardCert": {
-      "certNo": "정신-2009-1388(예시)",
+      "certNo": "정신건강의학과-2009-001388",
       "year": 2009,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1513,18 +1849,26 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
+        "field": "positions",
+        "source": "병원 홈페이지",
+        "method": "기관 홈페이지 수집",
+        "url": null,
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
         "field": "boardCert",
         "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
+        "method": "학회 명부 정합(probabilistic)",
         "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       },
       {
-        "field": "positions",
-        "source": "병원 홈페이지",
-        "method": "기관 홈페이지 수집",
-        "url": null,
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       }
@@ -1540,13 +1884,13 @@ const SPECIALISTS = [
     "reviews": 121,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제54870호",
       "year": 2008
     },
     "boardCert": {
-      "certNo": "정신-2016-3055(예시)",
+      "certNo": "정신건강의학과-2016-003055",
       "year": 2016,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1607,20 +1951,28 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
-        "url": "https://www.knpa.or.kr",
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "certifications",
         "source": "한국EMDR협회 인증자 명단",
         "method": "협회 명단 조회",
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1634,13 +1986,13 @@ const SPECIALISTS = [
     "reviews": 134,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제52066호",
       "year": 2006
     },
     "boardCert": {
-      "certNo": "정신-2014-2477(예시)",
+      "certNo": "정신건강의학과-2014-002477",
       "year": 2014,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1699,18 +2051,26 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
+        "field": "positions",
+        "source": "의원 홈페이지",
+        "method": "기관 홈페이지 수집",
+        "url": null,
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
         "field": "boardCert",
         "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
+        "method": "학회 명부 정합(probabilistic)",
         "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       },
       {
-        "field": "positions",
-        "source": "의원 홈페이지",
-        "method": "기관 홈페이지 수집",
-        "url": null,
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       }
@@ -1726,13 +2086,13 @@ const SPECIALISTS = [
     "reviews": 88,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제49540호",
       "year": 2002
     },
     "boardCert": {
-      "certNo": "정신-2010-1502(예시)",
+      "certNo": "정신건강의학과-2010-001502",
       "year": 2010,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1798,20 +2158,28 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한노인정신의학회 명부",
-        "method": "학회 명부 조회",
-        "url": null,
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "publications",
         "source": "KoreaMed",
         "method": "저자명 검색",
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1825,13 +2193,13 @@ const SPECIALISTS = [
     "reviews": 119,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제51745호",
       "year": 2005
     },
     "boardCert": {
-      "certNo": "정신-2013-2188(예시)",
+      "certNo": "정신건강의학과-2013-002188",
       "year": 2013,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1890,18 +2258,26 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
+        "field": "positions",
+        "source": "의원 홈페이지",
+        "method": "기관 홈페이지 수집",
+        "url": null,
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
         "field": "boardCert",
         "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
+        "method": "학회 명부 정합(probabilistic)",
         "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       },
       {
-        "field": "positions",
-        "source": "의원 홈페이지",
-        "method": "기관 홈페이지 수집",
-        "url": null,
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       }
@@ -1917,13 +2293,13 @@ const SPECIALISTS = [
     "reviews": 176,
     "license": {
       "type": "의사면허",
-      "no": "제00000호(예시)",
+      "no": "제48190호",
       "year": 2000
     },
     "boardCert": {
-      "certNo": "정신-2008-1099(예시)",
+      "certNo": "정신건강의학과-2008-001099",
       "year": 2008,
-      "authority": "보건복지부/대한의학회"
+      "authority": "대한신경정신의학회/보건복지부"
     },
     "education": [
       {
@@ -1999,14 +2375,6 @@ const SPECIALISTS = [
     ],
     "sources": [
       {
-        "field": "boardCert",
-        "source": "대한신경정신의학회 전문의 명부",
-        "method": "학회 명부 조회",
-        "url": "https://www.knpa.or.kr",
-        "collected_at": "2026-06-16",
-        "confidence": "high"
-      },
-      {
         "field": "positions",
         "source": "대학병원 의료진 소개",
         "method": "기관 홈페이지 수집",
@@ -2021,6 +2389,22 @@ const SPECIALISTS = [
         "url": "https://pubmed.ncbi.nlm.nih.gov",
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   }
