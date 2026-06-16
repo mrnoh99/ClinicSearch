@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0" />
+  <meta name="theme-color" content="#0d9488" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="전원병원" />
+  <title>전원 병원 찾기 · ClinicSearch</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./assets/icon-180.png" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🚑</span>
+      <div>
+        <h1>전원 병원 찾기</h1>
+        <p class="tagline">거주지·현재 위치 기준, 거리와 접근성으로 최적의 전원 병원을 찾아드립니다</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="searchbar">
+    <div class="search-row">
+      <input id="addressInput" type="text" inputmode="search"
+        placeholder="거주지 주소 입력 (예: 서울시 강남구 테헤란로 415)" />
+      <button id="searchBtn" class="btn primary">검색</button>
+      <button id="geoBtn" class="btn">📍 현재 위치 사용</button>
+    </div>
+    <div class="filters">
+      <label>전문과목
+        <select id="specialtySelect"></select>
+      </label>
+      <label>세부전공
+        <select id="subspecialtySelect" disabled></select>
+      </label>
+      <label>정렬
+        <select id="sortBy">
+          <option value="score">전원 적합도순</option>
+          <option value="distance">거리순</option>
+        </select>
+      </label>
+      <label>반경
+        <select id="maxKm">
+          <option value="0">제한 없음</option>
+          <option value="5">5 km</option>
+          <option value="10">10 km</option>
+          <option value="20">20 km</option>
+          <option value="30">30 km</option>
+        </select>
+      </label>
+      <label class="chk"><input type="checkbox" id="requireER" /> 응급실 필수</label>
+      <label class="chk"><input type="checkbox" id="requireICU" /> 중환자실 필수</label>
+    </div>
+    <p id="statusMsg" class="status"></p>
+  </section>
+
+  <main class="layout">
+    <aside class="results">
+      <div class="results-head">
+        <h2>검색 결과 <span id="resultCount">0</span>곳</h2>
+      </div>
+      <ul id="resultList" class="result-list"></ul>
+    </aside>
+
+    <div class="map-wrap">
+      <div id="map"></div>
+    </div>
+
+    <aside id="detailPanel" class="detail"></aside>
+  </main>
+
+  <footer class="foot">
+    <p>※ 표시된 병원·의료진 정보는 데모용 예시 데이터입니다. 실제 전원 결정 시 의료기관에 직접 확인하세요.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

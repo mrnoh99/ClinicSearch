@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs / temp
+*.log
+/tmp/
+
+# Node (네이티브/도구 사용 시)
+node_modules/

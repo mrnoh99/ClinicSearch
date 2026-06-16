@@ -1,0 +1,16 @@
+{
+  "name": "전원 병원 찾기 · ClinicSearch",
+  "short_name": "전원병원",
+  "description": "거주지·현재 위치 기준으로 거리와 접근성을 고려해 최적의 전원 병원을 찾아주는 앱",
+  "lang": "ko",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f1f5f9",
+  "theme_color": "#0d9488",
+  "icons": [
+    { "src": "./assets/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
