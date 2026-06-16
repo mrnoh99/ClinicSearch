@@ -28,8 +28,8 @@ import os
 import sqlite3
 import sys
 
-HOSP_URL = "http://apis.data.go.kr/B551182/hospInfoService1/getHospBasisList1"
-DGSBJT_URL = "http://apis.data.go.kr/B551182/MadmDtlInfoService2.7/getDgsbjtInfo2.7"
+HOSP_URL = "https://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList"
+DGSBJT_URL = "https://apis.data.go.kr/B551182/MadmDtlInfoService2.7/getDgsbjtInfo2.7"
 PSYCH_DGSBJT_CD = "03"   # 정신건강의학과 진료과목코드(HIRA 명세 기준. 02=신경과, 23=가정의학과)
 
 # HIRA 종별코드명 → 본 앱 type (clCd: 01 상급종합/11 종합병원/21 병원/28 요양병원/29 정신병원/31 의원)
