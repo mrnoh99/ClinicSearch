@@ -12,3 +12,17 @@ Thumbs.db
 
 # Node (네이티브/도구 사용 시)
 node_modules/
+
+# 생성되는 DB 빌드 산출물 (시드/스크립트로 재생성 가능)
+db/clinicsearch.db
+db/clinicsearch.db-journal
+
+# Xcode (네이티브 앱)
+ios/*.xcodeproj
+ios/build/
+ios/DerivedData/
+*.xcuserstate
+
+# Python
+__pycache__/
+*.pyc

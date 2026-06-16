@@ -38,28 +38,59 @@ python3 -m http.server 8137
 이 방식은 별도 앱스토어 심사 없이 즉시 사용할 수 있어, 사내/병원 내부용으로 적합합니다.
 앱스토어 배포가 필요한 **네이티브(SwiftUI) 버전**도 추가 제작 가능합니다.
 
+## 플랫폼
+
+| 플랫폼 | 위치 | 비고 |
+|--------|------|------|
+| 웹앱 / PWA | 루트(`index.html` 등) | 아이패드 "홈 화면에 추가"로 앱처럼 사용 |
+| 네이티브 iOS/iPadOS | `ios/` | SwiftUI + MapKit, Xcode로 빌드(앱스토어 배포용) |
+| 데이터베이스 / ETL | `db/` | SQLite + 공공 API 수집 파이프라인 |
+
 ## 파일 구조
 
 ```
 ClinicSearch/
-├── index.html              # 앱 진입점 / 레이아웃
+├── index.html              # 웹앱 진입점 / 레이아웃
 ├── manifest.webmanifest    # PWA 매니페스트
 ├── sw.js                   # 서비스워커(오프라인 앱 셸 캐시)
 ├── css/styles.css          # 반응형 스타일(아이패드/모바일/데스크톱)
 ├── js/
-│   ├── data.js             # 병원·의료진·전문과목 데이터(데모)
+│   ├── data.js             # 병원·의료진 데이터 (db/build_db.py 가 DB로부터 자동 생성)
 │   └── app.js              # 검색·점수계산·지도·렌더링 로직
-└── assets/                 # 앱 아이콘
+├── assets/                 # 앱 아이콘
+├── ios/                    # 네이티브 SwiftUI 앱 (iPhone/iPad)
+│   ├── project.yml         #   XcodeGen 설정
+│   └── ClinicSearch/*.swift
+└── db/                     # 데이터베이스 + 수집 파이프라인 (db/README.md 참고)
+    ├── schema.sql          #   SQLite 스키마
+    ├── build_db.py         #   시드/DB → SQLite + js/data.js + API JSON
+    ├── seed/               #   기본 시드 데이터
+    └── scripts/            #   HIRA·E-Gen 수집기, DB 검색 데모
 ```
 
-## 데이터 교체 안내
+## 네이티브 iOS / iPadOS 앱 (`ios/`)
 
-현재 `js/data.js`의 병원·의료진 정보는 **데모용 예시 데이터**입니다.
-실제 운영 시에는 다음 데이터로 교체하세요.
+SwiftUI + MapKit으로 작성한 네이티브 앱입니다. 웹앱과 **동일한 데이터·전원 적합도 점수 로직**을 사용합니다.
 
-- **병원 정보**: 건강보험심사평가원(HIRA) 병원·약국 찾기 OpenAPI, 응급의료포털(E-Gen) 실시간 응급실/중환자실 가용병상 API
+```bash
+brew install xcodegen          # 최초 1회
+cd ios && xcodegen generate    # ClinicSearch.xcodeproj 생성
+open ClinicSearch.xcodeproj    # Xcode에서 실행 (iOS 17+)
+```
+
+XcodeGen 없이도 Xcode에서 빈 App 프로젝트를 만든 뒤 `ios/ClinicSearch/`의 `.swift`·`Info.plist`를 추가해 사용할 수 있습니다.
+
+## 데이터 / 데이터베이스 (`db/`)
+
+병원·의료진 데이터는 `db/`의 **SQLite DB + ETL 파이프라인**으로 관리되며, DB가 단일 진실 공급원입니다.
+`db/build_db.py`가 DB로부터 웹앱(`js/data.js`)과 API용 JSON을 생성합니다.
+
+- **병원 정보**: 건강보험심사평가원(HIRA) 병원정보서비스 OpenAPI
+- **응급/중환자**: 응급의료포털(E-Gen) 실시간 응급실/중환자실 가용병상 API
 - **의료진 정보**: 각 의료기관 제공 자료, 전문의 자격 정보
-- **지오코딩**: 운영 시 대량 호출에는 카카오/네이버 지도 API 또는 자체 Nominatim 인스턴스 권장 (공개 Nominatim은 사용량 제한 정책 준수 필요)
+- **지오코딩**: 웹앱은 Nominatim, iOS는 CLGeocoder 사용. 대량 호출 시 카카오/네이버 지도 API 권장
+
+자세한 내용은 [`db/README.md`](db/README.md) 참고.
 
 ## 면책
 
