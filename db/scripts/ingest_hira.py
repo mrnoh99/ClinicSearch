@@ -28,22 +28,32 @@ import os
 import sqlite3
 import sys
 
-HOSP_URL = "http://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList"
+HOSP_URL = "http://apis.data.go.kr/B551182/hospInfoService1/getHospBasisList1"
 DGSBJT_URL = "http://apis.data.go.kr/B551182/MadmDtlInfoService2.7/getDgsbjtInfo2.7"
-PSYCH_DGSBJT_CD = "23"   # 정신건강의학과(구 신경정신과) 진료과목코드
+PSYCH_DGSBJT_CD = "03"   # 정신건강의학과 진료과목코드(HIRA 명세 기준. 02=신경과, 23=가정의학과)
 
-# HIRA 종별코드명 → 본 앱 type
-CL_TYPE = {"상급종합": "상급종합병원", "종합병원": "종합병원", "병원": "병원",
-           "요양병원": "요양병원", "의원": "의원", "정신병원": "정신병원"}
+# HIRA 종별코드명 → 본 앱 type (clCd: 01 상급종합/11 종합병원/21 병원/28 요양병원/29 정신병원/31 의원)
+CL_TYPE = {"상급종합": "상급종합병원", "상급종합병원": "상급종합병원",
+           "종합병원": "종합병원", "병원": "병원", "요양병원": "요양병원",
+           "정신병원": "정신병원", "의원": "의원", "한방병원": "한방병원", "한의원": "한의원"}
 
 
 # ----------------------------- HTTP ----------------------------- #
-def _get_json(url, params):
+def _encode_key(key):
+    """data.go.kr 키 처리: 이미 %-인코딩된 Encoding 키면 그대로, 아니면 인코딩."""
+    import urllib.parse
+    return key if "%" in key else urllib.parse.quote(key, safe="")
+
+
+def _get_json(url, params, key=None):
     import urllib.request
     import urllib.parse
-    q = urllib.parse.urlencode(params, safe="%")
-    with urllib.request.urlopen(f"{url}?{q}", timeout=20) as r:
-        return json.loads(r.read().decode("utf-8"))
+    qs = urllib.parse.urlencode(params, safe="%")
+    if key is not None:
+        qs = f"ServiceKey={_encode_key(key)}&{qs}"
+    with urllib.request.urlopen(f"{url}?{qs}", timeout=20) as r:
+        body = r.read().decode("utf-8", errors="replace")
+    return json.loads(body)
 
 
 def _items(resp):
@@ -103,27 +113,41 @@ def upsert(con, h, has_psych, psych_cnt):
 
 
 # ----------------------------- 수집 본체 ----------------------------- #
-def collect_live(con, key, sido, sggu, max_pages, psychiatry_only):
+def collect_live(con, key, sido, sggu, max_pages, psychiatry_only, hosp_url, with_dept):
+    """getHospBasisList를 dgsbjtCd=03(정신건강의학과)로 필터해 직접 수집.
+    과목별 전문의 수가 필요하면 --with-dept 로 의료기관별상세정보(getDgsbjtInfo) 보강."""
     page, loaded = 1, 0
     while page <= max_pages:
+        params = {"pageNo": page, "numOfRows": 100, "_type": "json"}
+        if sido:
+            params["sidoCd"] = sido
+        if sggu:
+            params["sgguCd"] = sggu
+        if psychiatry_only:
+            params["dgsbjtCd"] = PSYCH_DGSBJT_CD       # 서버측 정신건강의학과 필터
         try:
-            resp = _get_json(HOSP_URL, {"serviceKey": key, "sidoCd": sido or "",
-                                        "sgguCd": sggu or "", "pageNo": page,
-                                        "numOfRows": 100, "_type": "json"})
+            resp = _get_json(hosp_url, params, key=key)
         except Exception as e:
             print(f"  getHospBasisList page {page} 실패: {e}")
+            break
+        header = (resp.get("response", {}) or {}).get("header", {}) or {}
+        code = header.get("resultCode")
+        if code not in (None, "00", "0"):
+            print(f"  API 오류 resultCode={code} ({header.get('resultMsg')})")
             break
         rows, total = _items(resp)
         if not rows:
             break
         for rec in rows:
             h = parse_hosp(rec)
-            try:
-                dresp = _get_json(DGSBJT_URL, {"serviceKey": key, "ykiho": h["ykiho"], "_type": "json"})
-                depts, _ = _items(dresp)
-            except Exception:
-                depts = []
-            has_psych, cnt = psych_from_depts(depts)
+            has_psych, cnt = (1, 0) if psychiatry_only else (0, 0)
+            if with_dept:
+                try:
+                    dresp = _get_json(DGSBJT_URL, {"ykiho": h["ykiho"], "_type": "json"}, key=key)
+                    has2, cnt = psych_from_depts(_items(dresp)[0])
+                    has_psych = has_psych or has2
+                except Exception:
+                    pass
             if psychiatry_only and not has_psych:
                 continue
             upsert(con, h, has_psych, cnt)
@@ -160,6 +184,9 @@ def main():
     ap.add_argument("--sggu", default="", help="시군구코드")
     ap.add_argument("--max-pages", type=int, default=10)
     ap.add_argument("--all", action="store_true", help="정신과 외 기관도 적재(기본: 정신과만)")
+    ap.add_argument("--hosp-url", default=HOSP_URL, help="getHospBasisList 엔드포인트(버전 변경 시)")
+    ap.add_argument("--with-dept", action="store_true",
+                    help="과목별 전문의 수 보강(의료기관별상세정보 getDgsbjtInfo 별도 활용신청 필요)")
     ap.add_argument("--fixture-hosp", help="getHospBasisList 응답 JSON(오프라인)")
     ap.add_argument("--fixture-dept", help="ykiho→getDgsbjtInfo 응답 맵 JSON(오프라인)")
     ap.add_argument("--export", action="store_true", help="db/export/hira_facilities.json 내보내기")
@@ -182,7 +209,8 @@ def main():
             print("    --fixture-hosp/--fixture-dept 로 저장된 응답을 적재하세요.")
             con.close()
             return 1
-        n = collect_live(con, key, args.sido, args.sggu, args.max_pages, psychiatry_only)
+        n = collect_live(con, key, args.sido, args.sggu, args.max_pages,
+                         psychiatry_only, args.hosp_url, args.with_dept)
         print(f"✅ HIRA 수집 완료: {n}건 적재")
 
     # 요약

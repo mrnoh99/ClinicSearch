@@ -935,6 +935,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "low"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1048,6 +1064,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1158,6 +1190,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "low"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1259,6 +1307,22 @@ const SPECIALISTS = [
         "url": "https://pubmed.ncbi.nlm.nih.gov",
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1335,6 +1399,22 @@ const SPECIALISTS = [
         "source": "병원 홈페이지 의료진 소개",
         "method": "기관 홈페이지 수집",
         "url": null,
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       }
@@ -1432,6 +1512,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1531,6 +1627,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "high"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1626,6 +1738,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1727,6 +1855,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "high"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1813,6 +1957,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -1895,6 +2055,22 @@ const SPECIALISTS = [
         "source": "의원 홈페이지",
         "method": "기관 홈페이지 수집",
         "url": null,
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       }
@@ -1988,6 +2164,22 @@ const SPECIALISTS = [
         "url": null,
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   },
@@ -2070,6 +2262,22 @@ const SPECIALISTS = [
         "source": "의원 홈페이지",
         "method": "기관 홈페이지 수집",
         "url": null,
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
         "collected_at": "2026-06-16",
         "confidence": "high"
       }
@@ -2181,6 +2389,22 @@ const SPECIALISTS = [
         "url": "https://pubmed.ncbi.nlm.nih.gov",
         "collected_at": "2026-06-16",
         "confidence": "medium"
+      },
+      {
+        "field": "boardCert",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
+      },
+      {
+        "field": "license",
+        "source": "대한신경정신의학회 전문의 명부",
+        "method": "학회 명부 정합(probabilistic)",
+        "url": "https://www.knpa.or.kr",
+        "collected_at": "2026-06-16",
+        "confidence": "high"
       }
     ]
   }

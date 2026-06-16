@@ -1,47 +1,107 @@
 {
   "response": {
-    "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "NORMAL SERVICE."
+    },
     "body": {
       "items": {
         "item": [
           {
-            "ykiho": "JDQ4MTAwMSMlMjAlMjMx", "yadmNm": "서울숲정신건강의학과의원",
-            "clCd": "31", "clCdNm": "의원", "sidoCd": "110000", "sidoCdNm": "서울",
-            "sgguCd": "110200", "sgguCdNm": "성동구", "emdongNm": "성수동", "postNo": "04779",
-            "addr": "서울특별시 성동구 왕십리로 100", "telno": "02-460-1234",
-            "estbDd": "20120301", "drTotCnt": 3, "XPos": "127.0445", "YPos": "37.5446"
+            "ykiho": "JDQ4MTAwMSMlMjAlMjMx",
+            "yadmNm": "서울숲정신건강의학과의원",
+            "clCd": "31",
+            "clCdNm": "의원",
+            "sidoCd": "110000",
+            "sidoCdNm": "서울",
+            "sgguCd": "110200",
+            "sgguCdNm": "성동구",
+            "emdongNm": "성수동",
+            "postNo": "04779",
+            "addr": "서울특별시 성동구 왕십리로 100",
+            "telno": "02-460-1234",
+            "estbDd": "20120301",
+            "drTotCnt": 3,
+            "XPos": "127.0445",
+            "YPos": "37.5446"
           },
           {
-            "ykiho": "JDQ4MTAwMiMlMjAlMjMy", "yadmNm": "마포연세정신건강의학과병원",
-            "clCd": "21", "clCdNm": "병원", "sidoCd": "110000", "sidoCdNm": "서울",
-            "sgguCd": "110440", "sgguCdNm": "마포구", "emdongNm": "공덕동", "postNo": "04157",
-            "addr": "서울특별시 마포구 마포대로 200", "telno": "02-715-7000",
-            "estbDd": "20081115", "drTotCnt": 12, "XPos": "126.9512", "YPos": "37.5446"
+            "ykiho": "JDQ4MTAwMiMlMjAlMjMy",
+            "yadmNm": "마포연세정신건강의학과병원",
+            "clCd": "21",
+            "clCdNm": "병원",
+            "sidoCd": "110000",
+            "sidoCdNm": "서울",
+            "sgguCd": "110440",
+            "sgguCdNm": "마포구",
+            "emdongNm": "공덕동",
+            "postNo": "04157",
+            "addr": "서울특별시 마포구 마포대로 200",
+            "telno": "02-715-7000",
+            "estbDd": "20081115",
+            "drTotCnt": 12,
+            "XPos": "126.9512",
+            "YPos": "37.5446"
           },
           {
-            "ykiho": "JDQ4MTAwMyMlMjAlMjMz", "yadmNm": "강남서울대학교병원",
-            "clCd": "11", "clCdNm": "상급종합", "sidoCd": "110000", "sidoCdNm": "서울",
-            "sgguCd": "110230", "sgguCdNm": "강남구", "emdongNm": "일원동", "postNo": "06351",
-            "addr": "서울특별시 강남구 일원로 81", "telno": "02-3410-2114",
-            "estbDd": "19941109", "drTotCnt": 1450, "XPos": "127.0857", "YPos": "37.4881"
+            "ykiho": "JDQ4MTAwMyMlMjAlMjMz",
+            "yadmNm": "강남서울대학교병원",
+            "clCd": "01",
+            "clCdNm": "상급종합병원",
+            "sidoCd": "110000",
+            "sidoCdNm": "서울",
+            "sgguCd": "110230",
+            "sgguCdNm": "강남구",
+            "emdongNm": "일원동",
+            "postNo": "06351",
+            "addr": "서울특별시 강남구 일원로 81",
+            "telno": "02-3410-2114",
+            "estbDd": "19941109",
+            "drTotCnt": 1450,
+            "XPos": "127.0857",
+            "YPos": "37.4881"
           },
           {
-            "ykiho": "JDQ4MTAwNCMlMjAlMjM0", "yadmNm": "노원햇살정신건강의학과병원",
-            "clCd": "21", "clCdNm": "병원", "sidoCd": "110000", "sidoCdNm": "서울",
-            "sgguCd": "110350", "sgguCdNm": "노원구", "emdongNm": "상계동", "postNo": "01695",
-            "addr": "서울특별시 노원구 노해로 480", "telno": "02-950-1100",
-            "estbDd": "20051010", "drTotCnt": 9, "XPos": "127.0560", "YPos": "37.6542"
+            "ykiho": "JDQ4MTAwNCMlMjAlMjM0",
+            "yadmNm": "노원햇살정신건강의학과병원",
+            "clCd": "21",
+            "clCdNm": "병원",
+            "sidoCd": "110000",
+            "sidoCdNm": "서울",
+            "sgguCd": "110350",
+            "sgguCdNm": "노원구",
+            "emdongNm": "상계동",
+            "postNo": "01695",
+            "addr": "서울특별시 노원구 노해로 480",
+            "telno": "02-950-1100",
+            "estbDd": "20051010",
+            "drTotCnt": 9,
+            "XPos": "127.0560",
+            "YPos": "37.6542"
           },
           {
-            "ykiho": "JDQ4MTAwNSMlMjAlMjM1", "yadmNm": "강남튼튼정형외과의원",
-            "clCd": "31", "clCdNm": "의원", "sidoCd": "110000", "sidoCdNm": "서울",
-            "sgguCd": "110230", "sgguCdNm": "강남구", "emdongNm": "역삼동", "postNo": "06236",
-            "addr": "서울특별시 강남구 테헤란로 152", "telno": "02-555-7000",
-            "estbDd": "20150601", "drTotCnt": 4, "XPos": "127.0366", "YPos": "37.5006"
+            "ykiho": "JDQ4MTAwNSMlMjAlMjM1",
+            "yadmNm": "강남튼튼정형외과의원",
+            "clCd": "31",
+            "clCdNm": "의원",
+            "sidoCd": "110000",
+            "sidoCdNm": "서울",
+            "sgguCd": "110230",
+            "sgguCdNm": "강남구",
+            "emdongNm": "역삼동",
+            "postNo": "06236",
+            "addr": "서울특별시 강남구 테헤란로 152",
+            "telno": "02-555-7000",
+            "estbDd": "20150601",
+            "drTotCnt": 4,
+            "XPos": "127.0366",
+            "YPos": "37.5006"
           }
         ]
       },
-      "numOfRows": 100, "pageNo": 1, "totalCount": 5
+      "numOfRows": 100,
+      "pageNo": 1,
+      "totalCount": 5
     }
   }
 }

@@ -158,8 +158,10 @@ python3 db/build_db.py --db db/clinicsearch.db
 병원정보서비스 + 진료과목 정보를 결합해 정신건강의학과 진료 기관을 수집, `hira_facility` 테이블에 적재합니다.
 
 - `getHospBasisList` — 기관명/종별/주소/좌표/의사수
-- `getDgsbjtInfo` — 진료과목(정신건강의학과=코드 23)과 **과목별 전문의 수**(`dgsbjtPrSdrCnt`)
+- `getDgsbjtInfo` — 진료과목(정신건강의학과=코드 **03**, HIRA 명세 기준)과 과목별 전문의 수(`dgsbjtPrSdrCnt`)
+- `getHospBasisList`는 `dgsbjtCd=03` 필터를 직접 지원 → 정신과 기관을 서버측에서 바로 조회
 - 정신과 진료과목 보유 기관만 필터링(`--all`로 전체 적재 가능)
+- 엔드포인트/키 파라미터(`ServiceKey`)·인코딩 자동 처리, 버전 변경은 `--hosp-url`로 지정
 
 ```bash
 # 라이브 (서비스키 필요)

@@ -1,119 +1,245 @@
 {
-  "generated_at": "2026-06-16T02:42:06",
+  "generated_at": "2026-06-16T04:39:15",
   "roster_source": "db/sources/knpa_roster_sample.csv",
   "roster_rows": 18,
   "matched": [
     {
       "name": "김현수",
       "specialist_id": "psy001",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "서울대학교",
       "grad_year": 1998,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2003-0457(예시)",
+          "정신건강의학과-2003-000457"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제45012호"
+        ]
+      }
     },
     {
       "name": "이정민",
       "specialist_id": "psy002",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "연세대학교",
       "grad_year": 2003,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2008-1123(예시)",
+          "정신건강의학과-2008-001123"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제48230호"
+        ]
+      }
     },
     {
       "name": "박서진",
       "specialist_id": "psy003",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "성균관대학교",
       "grad_year": 2008,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2013-2210(예시)",
+          "정신건강의학과-2013-002210"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제51890호"
+        ]
+      }
     },
     {
       "name": "정유나",
       "specialist_id": "psy004",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "가톨릭대학교",
       "grad_year": 2002,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2007-0912(예시)",
+          "정신건강의학과-2007-000912"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제44551호"
+        ]
+      }
     },
     {
       "name": "한지호",
       "specialist_id": "psy005",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "한양대학교",
       "grad_year": 2007,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2012-1745(예시)",
+          "정신건강의학과-2012-001745"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제50677호"
+        ]
+      }
     },
     {
       "name": "오하늘",
       "specialist_id": "psy006",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "이화여자대학교",
       "grad_year": 2009,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2014-2588(예시)",
+          "정신건강의학과-2014-002588"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제52140호"
+        ]
+      }
     },
     {
       "name": "신동욱",
       "specialist_id": "psy007",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "중앙대학교",
       "grad_year": 2001,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2006-0633(예시)",
+          "정신건강의학과-2006-000633"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제43388호"
+        ]
+      }
     },
     {
       "name": "윤소희",
       "specialist_id": "psy008",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "고려대학교",
       "grad_year": 2010,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2015-2901(예시)",
+          "정신건강의학과-2015-002901"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제53299호"
+        ]
+      }
     },
     {
       "name": "강민재",
       "specialist_id": "psy009",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "울산대학교",
       "grad_year": 2004,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2009-1388(예시)",
+          "정신건강의학과-2009-001388"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제49112호"
+        ]
+      }
     },
     {
       "name": "임가은",
       "specialist_id": "psy010",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "경희대학교",
       "grad_year": 2011,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2016-3055(예시)",
+          "정신건강의학과-2016-003055"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제54870호"
+        ]
+      }
     },
     {
       "name": "조은별",
       "specialist_id": "psy011",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "인하대학교",
       "grad_year": 2009,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2014-2477(예시)",
+          "정신건강의학과-2014-002477"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제52066호"
+        ]
+      }
     },
     {
       "name": "문채원",
       "specialist_id": "psy012",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "건국대학교",
       "grad_year": 2005,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2010-1502(예시)",
+          "정신건강의학과-2010-001502"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제49540호"
+        ]
+      }
     },
     {
       "name": "배수민",
       "specialist_id": "psy013",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "부산대학교",
       "grad_year": 2008,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2013-2188(예시)",
+          "정신건강의학과-2013-002188"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제51745호"
+        ]
+      }
     },
     {
       "name": "서지안",
       "specialist_id": "psy014",
-      "method": "deterministic:board_cert_no",
+      "method": "probabilistic:name+school+gradYear",
       "school": "아주대학교",
       "grad_year": 2003,
-      "changes": {}
+      "changes": {
+        "board_cert_no": [
+          "정신-2008-1099(예시)",
+          "정신건강의학과-2008-001099"
+        ],
+        "license_no": [
+          "제00000호(예시)",
+          "제48190호"
+        ]
+      }
     }
   ],
   "new_specialists": [
@@ -167,7 +293,7 @@
   "unmatched": [],
   "summary": {
     "matched": 14,
-    "fields_updated": 0,
+    "fields_updated": 28,
     "new_specialists": 4,
     "homonym_groups": 1,
     "total_specialists_after": 18
