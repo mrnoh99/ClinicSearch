@@ -1,0 +1,35 @@
+{
+  "JDQ4MTAwMSMlMjAlMjMx": {
+    "response": { "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+      "body": { "items": { "item": [
+        { "dgsbjtCd": "23", "dgsbjtCdNm": "정신건강의학과", "dgsbjtPrSdrCnt": 3 }
+      ] }, "numOfRows": 100, "pageNo": 1, "totalCount": 1 } }
+  },
+  "JDQ4MTAwMiMlMjAlMjMy": {
+    "response": { "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+      "body": { "items": { "item": [
+        { "dgsbjtCd": "23", "dgsbjtCdNm": "정신건강의학과", "dgsbjtPrSdrCnt": 8 },
+        { "dgsbjtCd": "01", "dgsbjtCdNm": "내과", "dgsbjtPrSdrCnt": 2 }
+      ] }, "numOfRows": 100, "pageNo": 1, "totalCount": 2 } }
+  },
+  "JDQ4MTAwMyMlMjAlMjMz": {
+    "response": { "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+      "body": { "items": { "item": [
+        { "dgsbjtCd": "01", "dgsbjtCdNm": "내과", "dgsbjtPrSdrCnt": 120 },
+        { "dgsbjtCd": "23", "dgsbjtCdNm": "정신건강의학과", "dgsbjtPrSdrCnt": 25 },
+        { "dgsbjtCd": "12", "dgsbjtCdNm": "외과", "dgsbjtPrSdrCnt": 95 }
+      ] }, "numOfRows": 100, "pageNo": 1, "totalCount": 3 } }
+  },
+  "JDQ4MTAwNCMlMjAlMjM0": {
+    "response": { "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+      "body": { "items": { "item": [
+        { "dgsbjtCd": "23", "dgsbjtCdNm": "정신건강의학과", "dgsbjtPrSdrCnt": 6 }
+      ] }, "numOfRows": 100, "pageNo": 1, "totalCount": 1 } }
+  },
+  "JDQ4MTAwNSMlMjAlMjM1": {
+    "response": { "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+      "body": { "items": { "item": [
+        { "dgsbjtCd": "16", "dgsbjtCdNm": "정형외과", "dgsbjtPrSdrCnt": 4 }
+      ] }, "numOfRows": 100, "pageNo": 1, "totalCount": 1 } }
+  }
+}

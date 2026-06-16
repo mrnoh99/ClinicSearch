@@ -197,6 +197,28 @@ CREATE INDEX IF NOT EXISTS idx_spec_hospital   ON specialist(hospital_id);
 CREATE INDEX IF NOT EXISTS idx_spec_sub        ON specialist(subspecialty_id);
 CREATE INDEX IF NOT EXISTS idx_src_specialist  ON data_source(specialist_id);
 
+/* ================================================================== */
+/*  심평원(HIRA) 수집 적재 테이블 — API 수집 결과의 랜딩 존            */
+/*  병원정보서비스(getHospBasisList) + 진료과목(getDgsbjtInfo) 결과    */
+/* ================================================================== */
+CREATE TABLE IF NOT EXISTS hira_facility (
+    ykiho           TEXT PRIMARY KEY,          -- 암호화요양기호(HIRA 고유키)
+    name            TEXT,                      -- yadmNm 기관명
+    type            TEXT,                      -- clCdNm 종별(상급종합/종합병원/병원/의원)
+    sido            TEXT,                      -- sidoCdNm
+    sggu            TEXT,                      -- sgguCdNm
+    addr            TEXT,
+    tel             TEXT,
+    lat             REAL,                      -- YPos
+    lng             REAL,                      -- XPos
+    dr_tot_cnt      INTEGER DEFAULT 0,         -- drTotCnt 의사 총수
+    psych_dr_cnt    INTEGER DEFAULT 0,         -- 정신건강의학과 전문의 수(dgsbjtPrSdrCnt)
+    has_psychiatry  INTEGER DEFAULT 0,         -- 정신건강의학과 진료과목 보유(0/1)
+    source          TEXT DEFAULT 'HIRA',
+    collected_at    TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_hira_psych ON hira_facility(has_psychiatry);
+
 -- 통합 뷰: 전문의 + 소속병원 + 세부전공 + 학력/경력 수 집계
 CREATE VIEW IF NOT EXISTS v_specialist_full AS
 SELECT sp.id, sp.name, sp.gender, sp.reputation, sp.reviews,

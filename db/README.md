@@ -153,10 +153,39 @@ python3 db/scripts/ingest_egen.py --db db/clinicsearch.db --stage1 서울특별�
 python3 db/build_db.py --db db/clinicsearch.db
 ```
 
+### 심평원(HIRA) API 정신건강의학과 의료기관 수집
+
+병원정보서비스 + 진료과목 정보를 결합해 정신건강의학과 진료 기관을 수집, `hira_facility` 테이블에 적재합니다.
+
+- `getHospBasisList` — 기관명/종별/주소/좌표/의사수
+- `getDgsbjtInfo` — 진료과목(정신건강의학과=코드 23)과 **과목별 전문의 수**(`dgsbjtPrSdrCnt`)
+- 정신과 진료과목 보유 기관만 필터링(`--all`로 전체 적재 가능)
+
+```bash
+# 라이브 (서비스키 필요)
+export HIRA_SERVICE_KEY="발급키"
+python3 db/scripts/ingest_hira.py --db db/clinicsearch.db --sido 110000 --export
+
+# 오프라인 (저장된 실제 형식 응답으로 동일 로직 검증/적재)
+python3 db/scripts/ingest_hira.py --db db/clinicsearch.db \
+    --fixture-hosp db/sources/fixtures/hira_hosp_list.json \
+    --fixture-dept db/sources/fixtures/hira_dgsbjt.json --export
+```
+
+검증(오프라인 픽스처 5곳): 정신과 4곳 적재(정형외과의원 1곳 정상 필터),
+정신과 전문의 합계 42명 → 결과 `db/export/hira_facilities.json`.
+
+> ⚠️ 현 실행 환경은 아웃바운드 네트워크가 차단(403)되어 HIRA 라이브 호출은 불가합니다.
+> 동봉한 실제 응답 형식 픽스처로 수집 로직을 즉시 재현할 수 있으며, 네트워크+키가 있는
+> 환경에서 `--sido` 등으로 전국/지역 단위 라이브 수집이 동작합니다.
+> ※ HIRA OpenAPI는 기관·과목·전문의 '수'를 제공하며, **개별 의사 실명은 제공하지 않습니다.**
+> 실명·이력은 학회명부(`collect_knpa.py`)·기관 홈페이지로 보강한 뒤 `reconcile.py`로 정합합니다.
+
 ### 데이터 출처
 
-- **건강보험심사평가원(HIRA)** 병원정보서비스 — 기관명, 종별, 주소, 좌표, 전화, 병상 수
+- **건강보험심사평가원(HIRA)** 병원정보서비스/진료과목 — 기관명, 종별, 주소, 좌표, 의사수, 정신과 전문의 수
 - **국립중앙의료원 응급의료포털(E-Gen)** — 응급의료기관 등급, 실시간 응급실/중환자실 가용 병상
+- **대한신경정신의학회(KNPA) 명부** — 전문의 실명·자격번호·졸업대학·소속(`collect_knpa.py`)
 - **의료진 정보**(사진·졸업학교·졸업연도·수련병원·경력·평판) — 각 의료기관 제공 자료로 보강
 
 > 공개 API의 데이터는 출처별 이용약관·사용량 제한을 준수해 사용하세요.
