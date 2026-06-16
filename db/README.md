@@ -69,14 +69,40 @@ python3 db/scripts/ingest_specialists.py --db db/clinicsearch.db \
 python3 db/build_db.py
 
 # 2) 수집: 학회명부/공공데이터 → 표준 명부 CSV
-#    온라인(네트워크+키): KNPA 디렉터리/data.go.kr 호출
-DATA_GO_KR_KEY=발급키 python3 db/scripts/collect_knpa.py --out db/sources/knpa_roster.csv
-#    오프라인: 준비된 명부 CSV 스키마/중복/결측 검증
-python3 db/scripts/collect_knpa.py --validate db/sources/knpa_roster_sample.csv
+#    온라인(네트워크): KNPA 디렉터리 파서로 검색결과 페이지 순회·수집
+python3 db/scripts/collect_knpa.py --region 서울 --out db/sources/knpa_roster.csv
+#    오프라인: 저장한 디렉터리 HTML 파싱
+python3 db/scripts/collect_knpa.py --fixture db/sources/fixtures/knpa_directory_page1.html \
+        --out db/sources/knpa_roster.csv
+#    명부 CSV 스키마/중복/결측 검증
+python3 db/scripts/collect_knpa.py --validate db/sources/knpa_roster.csv
 
 # 3) 정합: 명부 ↔ 통합 DB 매칭/병합 + 출처 기록 + 앱 산출물 재생성
 python3 db/scripts/reconcile.py --roster db/sources/knpa_roster_sample.csv
 ```
+
+#### KNPA 디렉터리 파서 (`knpa_parser.py`)
+
+대한신경정신의학회 전문의 찾기 결과 페이지(HTML)를 표준 명부 스키마로 변환합니다.
+
+- **순수 함수** `parse_directory_html(html)` — HTML → 레코드(네트워크 불필요, 픽스처로 검증).
+- **헤더 라벨 매핑** — `전문의번호/출신대학/소속기관/전문분야` 등 표기 변형을 흡수(열 순서 무관).
+- **표(table)·카드(div) 레이아웃** 모두 대응, 중첩 태그·`<br>`·공백 정리, 동명이인 보존(중복만 제거).
+- **`KNPAClient`** — 검색 URL 템플릿(`{page}`)·지역 필터·페이지네이션·rate-limit 처리(라이브 수집).
+  실제 사이트 DOM/엔드포인트에 맞춰 `HEADER_ALIASES`와 `KNPAClient.DEFAULT_SEARCH`만 조정하면 됩니다.
+
+```bash
+# 파서 단위 검증(저장된 픽스처로 즉시 재현)
+python3 db/scripts/knpa_parser.py --fixture db/sources/fixtures/knpa_directory_page1.html
+python3 db/scripts/test_knpa_parser.py     # 자체 테스트(표/변형헤더/카드/동명이인)
+
+# 라이브 수집(네트워크 가능 환경) — 검색 URL 템플릿 지정 가능
+python3 db/scripts/collect_knpa.py --search-url 'https://www.knpa.or.kr/.../search?page={page}' \
+        --region 서울 --max-pages 50 --out db/sources/knpa_roster.csv
+```
+
+> 검증: 픽스처(6건) 파싱 → CSV → 정합 시 기존 2명 매칭, 신규 4명 추가, 동명이인 김현수
+> (서울대/1998 ↔ 경북대/2005) 분리까지 정상 동작 확인.
 
 **정합 규칙**
 1. 결정적 매칭 — 전문의자격번호 또는 면허번호 일치 → 동일인

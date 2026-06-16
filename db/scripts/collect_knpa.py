@@ -27,28 +27,30 @@ import csv
 import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import knpa_parser
+
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SCHEMA_COLS = ["성명", "성별", "전문의자격번호", "면허번호", "졸업대학",
-               "졸업연도", "수련병원", "현소속기관", "지역", "세부전공"]
+SCHEMA_COLS = knpa_parser.SCHEMA_COLS
 
 
-def fetch_knpa_directory(region=None, max_rows=1000):
-    """KNPA 전문의 디렉터리 수집(온라인). 네트워크/접근 권한 필요.
+def fetch_knpa_directory(region=None, max_pages=50, search_url=None):
+    """KNPA 전문의 디렉터리 수집(온라인) — knpa_parser.KNPAClient 사용.
 
-    실제 구현 시 디렉터리 검색 결과 페이지를 순회하며 인물 레코드를 파싱합니다.
-    본 환경은 아웃바운드 네트워크가 차단되어 있어 호출 시 사유를 안내합니다.
+    검색 결과 페이지를 순회하며 인물 레코드를 표준 명부 스키마로 파싱합니다.
+    본 환경은 아웃바운드 네트워크가 차단되어 있어 실패 시 사유를 안내합니다.
     """
-    import urllib.request
-    url = "https://www.knpa.or.kr"
-    try:
-        urllib.request.urlopen(url, timeout=8)
-    except Exception as e:
-        print(f"⚠️  KNPA 디렉터리에 접근할 수 없습니다: {e}")
-        print("    (이 실행 환경은 아웃바운드 네트워크가 제한되어 있을 수 있습니다)")
-        print("    네트워크가 가능한 환경에서 디렉터리 파서를 연결해 사용하세요.")
-        return []
-    # TODO: 디렉터리 검색 → 페이지네이션 → 레코드 파싱 (이용약관 준수)
-    return []
+    client = knpa_parser.KNPAClient(search_url=search_url, region=region)
+    rows = list(client.iter_records(max_pages=max_pages))
+    if not rows:
+        print("    네트워크가 가능한 환경에서 실행하거나, --fixture 로 저장된 HTML을 파싱하세요.")
+    return rows
+
+
+def parse_fixture(path):
+    """저장된 디렉터리 HTML(오프라인)을 파싱해 표준 명부 레코드로 변환."""
+    with open(path, encoding="utf-8") as f:
+        return knpa_parser.parse_directory_html(f.read())
 
 
 def fetch_datagokr_specialists(service_key, sido=None, max_rows=1000):
@@ -118,14 +120,22 @@ def main():
     ap.add_argument("--out", default=os.path.join(ROOT, "db", "sources", "knpa_roster.csv"))
     ap.add_argument("--region", help="지역 필터(예: 서울)")
     ap.add_argument("--validate", metavar="CSV", help="기존 명부 CSV 검증 모드")
+    ap.add_argument("--fixture", metavar="HTML", help="저장된 디렉터리 HTML 파싱(오프라인)")
+    ap.add_argument("--search-url", help="KNPA 검색 URL 템플릿({page} 포함)")
+    ap.add_argument("--max-pages", type=int, default=50)
     args = ap.parse_args()
 
     if args.validate:
         return validate(args.validate)
 
     rows = []
-    rows += fetch_knpa_directory(region=args.region)
-    rows += fetch_datagokr_specialists(os.environ.get("DATA_GO_KR_KEY"), sido=args.region)
+    if args.fixture:
+        rows = parse_fixture(args.fixture)
+        print(f"픽스처 파싱: {len(rows)}건")
+    else:
+        rows += fetch_knpa_directory(region=args.region, max_pages=args.max_pages,
+                                     search_url=args.search_url)
+        rows += fetch_datagokr_specialists(os.environ.get("DATA_GO_KR_KEY"), sido=args.region)
 
     if not rows:
         print("\n수집된 레코드가 없습니다(네트워크/키 제한).")
