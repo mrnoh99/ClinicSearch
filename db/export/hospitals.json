@@ -1,609 +1,522 @@
 [
   {
-    "id": "h1",
-    "name": "서울중앙대학교병원",
-    "type": "상급종합병원",
-    "address": "서울특별시 종로구 대학로 101",
-    "lat": 37.5803,
-    "lng": 127.0028,
-    "phone": "02-2072-0000",
-    "beds": 1786,
-    "er": true,
-    "erLevel": "권역응급의료센터",
-    "icu": true,
-    "parking": true,
-    "transit": "지하철 4호선 혜화역 도보 5분",
-    "ambulanceBay": true,
-    "transferDesk": true,
-    "avgWaitMin": 35,
-    "specialties": [
-      "내과",
-      "외과",
-      "정형외과",
-      "신경외과",
-      "흉부외과",
-      "신경과",
-      "응급의학과"
-    ],
-    "doctors": [
-      {
-        "name": "김도현",
-        "title": "교수",
-        "specialty": "신경외과",
-        "subspecialty": "뇌혈관",
-        "school": "서울대학교 의과대학",
-        "gradYear": 2001,
-        "training": "서울대학교병원 신경외과 전공의/전임의",
-        "career": [
-          "미국 Mayo Clinic 뇌혈관외과 연수",
-          "대한뇌혈관외과학회 정회원",
-          "뇌동맥류 수술 2,000례 이상"
-        ],
-        "reputation": 4.8,
-        "reviews": 312
-      },
-      {
-        "name": "이서연",
-        "title": "교수",
-        "specialty": "신경과",
-        "subspecialty": "뇌졸중",
-        "school": "연세대학교 의과대학",
-        "gradYear": 2004,
-        "training": "세브란스병원 신경과 전공의/전임의",
-        "career": [
-          "급성기 뇌졸중 혈전용해술 전문",
-          "대한뇌졸중학회 이사",
-          "24시간 stroke unit 운영"
-        ],
-        "reputation": 4.7,
-        "reviews": 268
-      }
-    ]
-  },
-  {
-    "id": "h10",
-    "name": "구로미래외과병원",
-    "type": "종합병원",
-    "address": "서울특별시 구로구 디지털로 300",
-    "lat": 37.485,
-    "lng": 126.9015,
-    "phone": "02-2680-0000",
-    "beds": 410,
-    "er": true,
-    "erLevel": "지역응급의료기관",
-    "icu": true,
-    "parking": true,
-    "transit": "지하철 2호선 구로디지털단지역 도보 6분",
-    "ambulanceBay": true,
-    "transferDesk": false,
-    "avgWaitMin": 24,
-    "specialties": [
-      "내과",
-      "외과",
-      "정형외과",
-      "응급의학과"
-    ],
-    "doctors": [
-      {
-        "name": "서동찬",
-        "title": "과장",
-        "specialty": "외과",
-        "subspecialty": "간담췌외과",
-        "school": "경북대학교 의과대학",
-        "gradYear": 2003,
-        "training": "서울대학교병원 외과 전공의/전임의",
-        "career": [
-          "복강경 간·담도 수술",
-          "췌장암 수술",
-          "대한외과학회 정회원"
-        ],
-        "reputation": 4.5,
-        "reviews": 112
-      }
-    ]
-  },
-  {
-    "id": "h11",
-    "name": "동작우리신경과병원",
-    "type": "병원(신경전문)",
-    "address": "서울특별시 동작구 사당로 220",
-    "lat": 37.4765,
-    "lng": 126.9816,
-    "phone": "02-588-0000",
-    "beds": 90,
+    "id": "p1",
+    "name": "국립서울정신건강병원",
+    "type": "정신병원(공공)",
+    "address": "서울특별시 광진구 용마산로 127",
+    "lat": 37.5589,
+    "lng": 127.0884,
+    "phone": "02-2204-0114",
+    "beds": 480,
     "er": false,
     "erLevel": null,
     "icu": false,
-    "parking": false,
-    "transit": "지하철 2·4호선 사당역 도보 3분",
-    "ambulanceBay": false,
-    "transferDesk": false,
-    "avgWaitMin": 10,
+    "parking": true,
+    "transit": "지하철 7호선 중곡역 도보 7분",
+    "ambulanceBay": true,
+    "transferDesk": true,
+    "closedWard": true,
+    "inpatient": true,
+    "psychER": true,
+    "dayHospital": true,
+    "avgWaitMin": 30,
     "specialties": [
-      "재활의학과",
-      "신경과",
       "정신건강의학과"
     ],
     "doctors": [
       {
-        "name": "문태웅",
-        "title": "원장",
-        "specialty": "신경과",
-        "subspecialty": "치매",
-        "school": "건국대학교 의과대학",
-        "gradYear": 2006,
-        "training": "삼성서울병원 신경과 전공의/전임의",
+        "name": "김현수",
+        "title": "진료부장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "조현병·정신증",
+        "school": "서울대학교 의과대학",
+        "gradYear": 1998,
+        "training": "서울대학교병원 정신건강의학과 전공의/전임의",
         "career": [
-          "치매·인지장애 클리닉",
-          "파킨슨병 진료",
-          "대한치매학회 회원"
+          "만성 조현병 입원치료 전문",
+          "정신응급 대응 체계 운영",
+          "대한신경정신의학회 정회원"
+        ],
+        "reputation": 4.6,
+        "reviews": 142
+      },
+      {
+        "name": "이정민",
+        "title": "정신응급팀장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "자살예방·정신응급",
+        "school": "연세대학교 의과대학",
+        "gradYear": 2003,
+        "training": "세브란스병원 정신건강의학과 전공의/전임의",
+        "career": [
+          "24시간 정신응급 진료",
+          "자살위기 개입(C-SSRS)",
+          "응급입원·행정입원 전원 코디네이션"
         ],
         "reputation": 4.7,
-        "reviews": 184
+        "reviews": 188
       }
     ]
   },
   {
-    "id": "h12",
-    "name": "고양호수종합병원",
-    "type": "종합병원",
-    "address": "경기도 고양시 일산동구 중앙로 1234",
-    "lat": 37.6584,
-    "lng": 126.77,
-    "phone": "031-900-0000",
-    "beds": 690,
-    "er": true,
-    "erLevel": "지역응급의료센터",
-    "icu": true,
-    "parking": true,
-    "transit": "지하철 3호선 정발산역 도보 8분",
-    "ambulanceBay": true,
-    "transferDesk": true,
-    "avgWaitMin": 26,
-    "specialties": [
-      "내과",
-      "외과",
-      "신경외과",
-      "흉부외과",
-      "소아청소년과",
-      "응급의학과"
-    ],
-    "doctors": [
-      {
-        "name": "유하늘",
-        "title": "과장",
-        "specialty": "흉부외과",
-        "subspecialty": "폐/식도",
-        "school": "가천대학교 의과대학",
-        "gradYear": 2005,
-        "training": "세브란스병원 흉부외과 전공의/전임의",
-        "career": [
-          "폐암 흉강경 수술",
-          "기흉 응급처치",
-          "대한흉부심장혈관외과학회 정회원"
-        ],
-        "reputation": 4.6,
-        "reviews": 96
-      }
-    ]
-  },
-  {
-    "id": "h2",
-    "name": "한강성심종합병원",
-    "type": "종합병원",
-    "address": "서울특별시 영등포구 여의대로 24",
-    "lat": 37.5256,
-    "lng": 126.9255,
-    "phone": "02-3779-0000",
-    "beds": 720,
-    "er": true,
-    "erLevel": "지역응급의료센터",
-    "icu": true,
-    "parking": true,
-    "transit": "지하철 5·9호선 여의도역 도보 8분",
-    "ambulanceBay": true,
-    "transferDesk": true,
-    "avgWaitMin": 22,
-    "specialties": [
-      "내과",
-      "외과",
-      "정형외과",
-      "흉부외과",
-      "재활의학과",
-      "응급의학과"
-    ],
-    "doctors": [
-      {
-        "name": "박준호",
-        "title": "과장",
-        "specialty": "흉부외과",
-        "subspecialty": "심장",
-        "school": "고려대학교 의과대학",
-        "gradYear": 1999,
-        "training": "삼성서울병원 흉부외과 전공의/전임의",
-        "career": [
-          "관상동맥 우회술 전문",
-          "심장이식 프로그램 참여",
-          "대한흉부심장혈관외과학회 정회원"
-        ],
-        "reputation": 4.6,
-        "reviews": 154
-      },
-      {
-        "name": "최민지",
-        "title": "과장",
-        "specialty": "정형외과",
-        "subspecialty": "척추",
-        "school": "한양대학교 의과대학",
-        "gradYear": 2006,
-        "training": "서울아산병원 정형외과 전공의",
-        "career": [
-          "최소침습 척추수술",
-          "노인 척추질환 클리닉 운영",
-          "척추내시경 1,000례"
-        ],
-        "reputation": 4.5,
-        "reviews": 201
-      }
-    ]
-  },
-  {
-    "id": "h3",
-    "name": "강남세인트병원",
-    "type": "종합병원",
-    "address": "서울특별시 강남구 테헤란로 415",
-    "lat": 37.5045,
-    "lng": 127.0492,
-    "phone": "02-555-0000",
-    "beds": 480,
-    "er": true,
-    "erLevel": "지역응급의료기관",
-    "icu": true,
-    "parking": true,
-    "transit": "지하철 2호선 선릉역 도보 3분",
-    "ambulanceBay": true,
+    "id": "p10",
+    "name": "강북힐링정신건강의학과의원",
+    "type": "정신건강의학과의원",
+    "address": "서울특별시 강북구 도봉로 235",
+    "lat": 37.6376,
+    "lng": 127.0256,
+    "phone": "02-989-3375",
+    "beds": 0,
+    "er": false,
+    "erLevel": null,
+    "icu": false,
+    "parking": false,
+    "transit": "지하철 4호선 수유역 도보 4분",
+    "ambulanceBay": false,
     "transferDesk": false,
-    "avgWaitMin": 18,
+    "closedWard": false,
+    "inpatient": false,
+    "psychER": false,
+    "dayHospital": false,
+    "avgWaitMin": 14,
     "specialties": [
-      "내과",
-      "정형외과",
-      "재활의학과",
-      "신경과",
-      "가정의학과"
+      "정신건강의학과"
     ],
     "doctors": [
       {
-        "name": "정유진",
+        "name": "배수민",
         "title": "원장",
-        "specialty": "재활의학과",
-        "subspecialty": "뇌신경재활",
-        "school": "가톨릭대학교 의과대학",
-        "gradYear": 2003,
-        "training": "서울성모병원 재활의학과 전공의/전임의",
-        "career": [
-          "뇌졸중 후 재활 전문",
-          "로봇재활치료 도입",
-          "대한재활의학회 정회원"
-        ],
-        "reputation": 4.4,
-        "reviews": 98
-      },
-      {
-        "name": "한지훈",
-        "title": "과장",
-        "specialty": "내과",
-        "subspecialty": "순환기내과",
-        "school": "성균관대학교 의과대학",
+        "specialty": "정신건강의학과",
+        "subspecialty": "정신신체의학",
+        "school": "부산대학교 의과대학",
         "gradYear": 2008,
-        "training": "삼성서울병원 내과 전공의/전임의",
+        "training": "분당서울대학교병원 정신건강의학과 전공의/전임의",
         "career": [
-          "관상동맥중재술(PCI)",
-          "고혈압·부정맥 클리닉",
-          "심장초음파 인증의"
+          "스트레스성 신체증상·화병 진료",
+          "만성통증 정신건강 협진",
+          "대한정신신체의학회 회원"
         ],
         "reputation": 4.6,
+        "reviews": 119
+      }
+    ]
+  },
+  {
+    "id": "p11",
+    "name": "수원중앙대학교병원 정신건강의학과",
+    "type": "종합병원 정신건강의학과",
+    "address": "경기도 수원시 영통구 월드컵로 164",
+    "lat": 37.2782,
+    "lng": 127.0435,
+    "phone": "031-219-5114",
+    "beds": 90,
+    "er": true,
+    "erLevel": "지역응급의료센터",
+    "icu": false,
+    "parking": true,
+    "transit": "분당선 청명역 도보 10분",
+    "ambulanceBay": true,
+    "transferDesk": true,
+    "closedWard": true,
+    "inpatient": true,
+    "psychER": true,
+    "dayHospital": false,
+    "avgWaitMin": 28,
+    "specialties": [
+      "정신건강의학과"
+    ],
+    "doctors": [
+      {
+        "name": "서지안",
+        "title": "교수",
+        "specialty": "정신건강의학과",
+        "subspecialty": "자살예방·정신응급",
+        "school": "아주대학교 의과대학",
+        "gradYear": 2003,
+        "training": "아주대학교병원 정신건강의학과 전공의/전임의",
+        "career": [
+          "응급실 기반 정신응급 협진",
+          "자살시도자 사후관리(사례관리)",
+          "대한신경정신의학회 정회원"
+        ],
+        "reputation": 4.7,
         "reviews": 176
       }
     ]
   },
   {
-    "id": "h4",
-    "name": "노원미래종합병원",
-    "type": "종합병원",
-    "address": "서울특별시 노원구 동일로 1342",
-    "lat": 37.6542,
-    "lng": 127.0568,
-    "phone": "02-950-0000",
-    "beds": 560,
-    "er": true,
-    "erLevel": "지역응급의료센터",
-    "icu": true,
+    "id": "p2",
+    "name": "마음편한신경정신과의원",
+    "type": "정신건강의학과의원",
+    "address": "서울특별시 강남구 테헤란로 311",
+    "lat": 37.5045,
+    "lng": 127.0419,
+    "phone": "02-558-0079",
+    "beds": 0,
+    "er": false,
+    "erLevel": null,
+    "icu": false,
     "parking": true,
-    "transit": "지하철 4·7호선 노원역 도보 6분",
-    "ambulanceBay": true,
-    "transferDesk": true,
-    "avgWaitMin": 27,
+    "transit": "지하철 2호선 역삼역 도보 3분",
+    "ambulanceBay": false,
+    "transferDesk": false,
+    "closedWard": false,
+    "inpatient": false,
+    "psychER": false,
+    "dayHospital": false,
+    "avgWaitMin": 15,
     "specialties": [
-      "내과",
-      "외과",
-      "신경외과",
-      "소아청소년과",
-      "응급의학과"
+      "정신건강의학과"
     ],
     "doctors": [
       {
-        "name": "오세훈",
-        "title": "과장",
-        "specialty": "외과",
-        "subspecialty": "외상외과",
-        "school": "중앙대학교 의과대학",
-        "gradYear": 2005,
-        "training": "아주대학교병원 외상외과 전임의",
+        "name": "박서진",
+        "title": "원장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "불안·공황장애",
+        "school": "성균관대학교 의과대학",
+        "gradYear": 2008,
+        "training": "삼성서울병원 정신건강의학과 전공의/전임의",
         "career": [
-          "중증외상 전담의",
-          "복부외상 응급수술",
-          "대한외상학회 정회원"
+          "공황장애·사회불안 인지행동치료(CBT)",
+          "직장인 스트레스 클리닉",
+          "대한불안의학회 회원"
         ],
-        "reputation": 4.5,
-        "reviews": 121
-      },
-      {
-        "name": "신아름",
-        "title": "과장",
-        "specialty": "소아청소년과",
-        "subspecialty": "소아감염",
-        "school": "이화여자대학교 의과대학",
-        "gradYear": 2009,
-        "training": "서울대학교어린이병원 전공의/전임의",
-        "career": [
-          "소아 감염질환 진료",
-          "예방접종 클리닉",
-          "대한소아감염학회 회원"
-        ],
-        "reputation": 4.7,
-        "reviews": 142
+        "reputation": 4.8,
+        "reviews": 264
       }
     ]
   },
   {
-    "id": "h5",
-    "name": "분당하늘대학교병원",
-    "type": "상급종합병원",
-    "address": "경기도 성남시 분당구 야탑로 59",
-    "lat": 37.4112,
-    "lng": 127.1289,
-    "phone": "031-780-0000",
-    "beds": 1340,
-    "er": true,
-    "erLevel": "권역응급의료센터",
-    "icu": true,
-    "parking": true,
-    "transit": "분당선 야탑역 도보 7분",
-    "ambulanceBay": true,
-    "transferDesk": true,
-    "avgWaitMin": 40,
-    "specialties": [
-      "내과",
-      "외과",
-      "신경외과",
-      "흉부외과",
-      "산부인과",
-      "신경과",
-      "응급의학과"
-    ],
-    "doctors": [
-      {
-        "name": "윤재석",
-        "title": "교수",
-        "specialty": "신경외과",
-        "subspecialty": "척추",
-        "school": "서울대학교 의과대학",
-        "gradYear": 2000,
-        "training": "분당서울대병원 신경외과 전공의/전임의",
-        "career": [
-          "척추 종양·변형 수술",
-          "내비게이션 척추수술",
-          "SCI 논문 80편 이상"
-        ],
-        "reputation": 4.9,
-        "reviews": 287
-      },
-      {
-        "name": "강혜수",
-        "title": "교수",
-        "specialty": "산부인과",
-        "subspecialty": "산과(고위험임신)",
-        "school": "울산대학교 의과대학",
-        "gradYear": 2002,
-        "training": "서울아산병원 산부인과 전공의/전임의",
-        "career": [
-          "고위험 산모 집중치료",
-          "태아의학 전문",
-          "모성태아의학 인증의"
-        ],
-        "reputation": 4.6,
-        "reviews": 165
-      }
-    ]
-  },
-  {
-    "id": "h6",
-    "name": "마포연세재활병원",
-    "type": "병원(재활전문)",
-    "address": "서울특별시 마포구 월드컵로 212",
-    "lat": 37.5563,
-    "lng": 126.9088,
-    "phone": "02-330-0000",
+    "id": "p3",
+    "name": "서울맑은정신건강의학과병원",
+    "type": "정신병원",
+    "address": "서울특별시 노원구 동일로 1234",
+    "lat": 37.6491,
+    "lng": 127.0628,
+    "phone": "02-933-7575",
     "beds": 220,
     "er": false,
     "erLevel": null,
     "icu": false,
     "parking": true,
-    "transit": "지하철 6호선 망원역 도보 10분",
-    "ambulanceBay": false,
+    "transit": "지하철 7호선 마들역 도보 6분",
+    "ambulanceBay": true,
     "transferDesk": true,
-    "avgWaitMin": 12,
+    "closedWard": true,
+    "inpatient": true,
+    "psychER": false,
+    "dayHospital": true,
+    "avgWaitMin": 22,
     "specialties": [
-      "정형외과",
-      "재활의학과",
-      "신경과"
+      "정신건강의학과"
     ],
     "doctors": [
       {
-        "name": "임가영",
-        "title": "원장",
-        "specialty": "재활의학과",
-        "subspecialty": "근골격재활",
-        "school": "경희대학교 의과대학",
-        "gradYear": 2007,
-        "training": "강북삼성병원 재활의학과 전공의",
+        "name": "정유나",
+        "title": "병원장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "기분장애(우울/조울)",
+        "school": "가톨릭대학교 의과대학",
+        "gradYear": 2002,
+        "training": "서울성모병원 정신건강의학과 전공의/전임의",
         "career": [
-          "근골격계 통증 재활",
-          "도수치료 프로그램",
-          "스포츠손상 재활"
+          "난치성 우울증 입원치료",
+          "전기경련치료(ECT) 운영",
+          "대한우울조울병학회 정회원"
         ],
-        "reputation": 4.8,
-        "reviews": 233
+        "reputation": 4.5,
+        "reviews": 131
+      },
+      {
+        "name": "한지호",
+        "title": "과장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "노인정신(치매/섬망)",
+        "school": "한양대학교 의과대학",
+        "gradYear": 2007,
+        "training": "한양대학교병원 정신건강의학과 전공의",
+        "career": [
+          "노인 우울·치매 동반 입원치료",
+          "섬망 관리",
+          "대한노인정신의학회 회원"
+        ],
+        "reputation": 4.4,
+        "reviews": 97
       }
     ]
   },
   {
-    "id": "h7",
-    "name": "송파제일정형외과병원",
-    "type": "병원(정형전문)",
-    "address": "서울특별시 송파구 올림픽로 300",
-    "lat": 37.5145,
-    "lng": 127.1059,
-    "phone": "02-2240-0000",
+    "id": "p4",
+    "name": "새봄소아청소년정신건강의학과의원",
+    "type": "정신건강의학과의원",
+    "address": "서울특별시 양천구 목동중앙로 86",
+    "lat": 37.5266,
+    "lng": 126.8757,
+    "phone": "02-2654-0420",
+    "beds": 0,
+    "er": false,
+    "erLevel": null,
+    "icu": false,
+    "parking": false,
+    "transit": "지하철 5호선 목동역 도보 4분",
+    "ambulanceBay": false,
+    "transferDesk": false,
+    "closedWard": false,
+    "inpatient": false,
+    "psychER": false,
+    "dayHospital": false,
+    "avgWaitMin": 18,
+    "specialties": [
+      "정신건강의학과"
+    ],
+    "doctors": [
+      {
+        "name": "오하늘",
+        "title": "원장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "소아청소년정신",
+        "school": "이화여자대학교 의과대학",
+        "gradYear": 2009,
+        "training": "서울대학교어린이병원 소아청소년정신 전임의",
+        "career": [
+          "ADHD·틱·발달 클리닉",
+          "청소년 우울·불안 평가",
+          "대한소아청소년정신의학회 회원"
+        ],
+        "reputation": 4.7,
+        "reviews": 203
+      }
+    ]
+  },
+  {
+    "id": "p5",
+    "name": "한울중독정신건강의학과병원",
+    "type": "정신병원(중독전문)",
+    "address": "경기도 의왕시 오전로 159",
+    "lat": 37.3447,
+    "lng": 126.9683,
+    "phone": "031-340-5000",
     "beds": 180,
     "er": false,
     "erLevel": null,
     "icu": false,
     "parking": true,
-    "transit": "지하철 2·8호선 잠실역 도보 4분",
-    "ambulanceBay": false,
-    "transferDesk": false,
-    "avgWaitMin": 15,
+    "transit": "지하철 1호선 의왕역 차량 8분",
+    "ambulanceBay": true,
+    "transferDesk": true,
+    "closedWard": true,
+    "inpatient": true,
+    "psychER": false,
+    "dayHospital": true,
+    "avgWaitMin": 25,
     "specialties": [
-      "정형외과",
-      "마취통증의학과",
-      "재활의학과"
+      "정신건강의학과"
     ],
     "doctors": [
       {
-        "name": "백승우",
-        "title": "원장",
-        "specialty": "정형외과",
-        "subspecialty": "관절(슬관절/고관절)",
-        "school": "부산대학교 의과대학",
+        "name": "신동욱",
+        "title": "병원장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "중독(알코올/도박/게임)",
+        "school": "중앙대학교 의과대학",
         "gradYear": 2001,
-        "training": "서울아산병원 정형외과 전공의/전임의",
+        "training": "국립법무병원·중앙대학교병원 정신건강의학과 전공의",
         "career": [
-          "인공관절 치환술 3,000례",
-          "무릎 연골재생술",
-          "대한슬관절학회 정회원"
-        ],
-        "reputation": 4.7,
-        "reviews": 311
-      },
-      {
-        "name": "조은비",
-        "title": "과장",
-        "specialty": "마취통증의학과",
-        "subspecialty": "통증의학",
-        "school": "전남대학교 의과대학",
-        "gradYear": 2010,
-        "training": "분당서울대병원 마취통증의학과 전공의",
-        "career": [
-          "신경차단술",
-          "척추 통증중재시술",
-          "대한통증학회 회원"
+          "알코올 해독·재활 입원프로그램",
+          "도박·게임 중독 클리닉",
+          "한국중독정신의학회 정회원"
         ],
         "reputation": 4.5,
-        "reviews": 129
+        "reviews": 116
       }
     ]
   },
   {
-    "id": "h8",
-    "name": "인천해안종합병원",
-    "type": "종합병원",
-    "address": "인천광역시 연수구 컨벤시아대로 165",
-    "lat": 37.3895,
-    "lng": 126.639,
-    "phone": "032-460-0000",
-    "beds": 640,
-    "er": true,
-    "erLevel": "지역응급의료센터",
-    "icu": true,
-    "parking": true,
-    "transit": "인천1호선 센트럴파크역 도보 9분",
-    "ambulanceBay": true,
-    "transferDesk": true,
-    "avgWaitMin": 30,
+    "id": "p6",
+    "name": "연세마음정신건강의학과의원",
+    "type": "정신건강의학과의원",
+    "address": "서울특별시 서대문구 신촌로 83",
+    "lat": 37.5559,
+    "lng": 126.9368,
+    "phone": "02-313-0091",
+    "beds": 0,
+    "er": false,
+    "erLevel": null,
+    "icu": false,
+    "parking": false,
+    "transit": "지하철 2호선 신촌역 도보 2분",
+    "ambulanceBay": false,
+    "transferDesk": false,
+    "closedWard": false,
+    "inpatient": false,
+    "psychER": false,
+    "dayHospital": false,
+    "avgWaitMin": 12,
     "specialties": [
-      "내과",
-      "외과",
-      "신경외과",
-      "비뇨의학과",
-      "응급의학과"
+      "정신건강의학과"
     ],
     "doctors": [
       {
-        "name": "남기태",
-        "title": "과장",
-        "specialty": "내과",
-        "subspecialty": "소화기내과",
-        "school": "인하대학교 의과대학",
-        "gradYear": 2004,
-        "training": "서울아산병원 내과 전공의/전임의",
+        "name": "윤소희",
+        "title": "원장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "수면의학",
+        "school": "고려대학교 의과대학",
+        "gradYear": 2010,
+        "training": "고려대학교안암병원 정신건강의학과 전공의/전임의",
         "career": [
-          "내시경 역행 췌담관조영술(ERCP)",
-          "소화기 출혈 응급내시경",
-          "대한소화기학회 정회원"
+          "불면증 인지행동치료(CBT-I)",
+          "수면다원검사 판독",
+          "대한수면의학회 회원"
+        ],
+        "reputation": 4.6,
+        "reviews": 158
+      }
+    ]
+  },
+  {
+    "id": "p7",
+    "name": "분당온정신건강의학과병원",
+    "type": "정신병원",
+    "address": "경기도 성남시 분당구 성남대로 343",
+    "lat": 37.3825,
+    "lng": 127.1186,
+    "phone": "031-712-2275",
+    "beds": 160,
+    "er": false,
+    "erLevel": null,
+    "icu": false,
+    "parking": true,
+    "transit": "분당선 서현역 도보 9분",
+    "ambulanceBay": true,
+    "transferDesk": true,
+    "closedWard": true,
+    "inpatient": true,
+    "psychER": true,
+    "dayHospital": true,
+    "avgWaitMin": 20,
+    "specialties": [
+      "정신건강의학과"
+    ],
+    "doctors": [
+      {
+        "name": "강민재",
+        "title": "병원장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "조현병·정신증",
+        "school": "울산대학교 의과대학",
+        "gradYear": 2004,
+        "training": "서울아산병원 정신건강의학과 전공의/전임의",
+        "career": [
+          "초발 정신증 조기중재",
+          "급성기 보호병동 운영",
+          "대한조현병학회 정회원"
+        ],
+        "reputation": 4.6,
+        "reviews": 149
+      },
+      {
+        "name": "임가은",
+        "title": "과장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "강박·외상(PTSD)",
+        "school": "경희대학교 의과대학",
+        "gradYear": 2011,
+        "training": "경희대학교병원 정신건강의학과 전공의",
+        "career": [
+          "외상후스트레스(PTSD)·강박장애 치료",
+          "EMDR 시행",
+          "대한정신건강의학회 회원"
+        ],
+        "reputation": 4.7,
+        "reviews": 121
+      }
+    ]
+  },
+  {
+    "id": "p8",
+    "name": "인천나래정신건강의학과의원",
+    "type": "정신건강의학과의원",
+    "address": "인천광역시 남동구 구월로 234",
+    "lat": 37.4486,
+    "lng": 126.7019,
+    "phone": "032-462-7140",
+    "beds": 0,
+    "er": false,
+    "erLevel": null,
+    "icu": false,
+    "parking": true,
+    "transit": "인천1호선 예술회관역 도보 5분",
+    "ambulanceBay": false,
+    "transferDesk": false,
+    "closedWard": false,
+    "inpatient": false,
+    "psychER": false,
+    "dayHospital": true,
+    "avgWaitMin": 16,
+    "specialties": [
+      "정신건강의학과"
+    ],
+    "doctors": [
+      {
+        "name": "조은별",
+        "title": "원장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "기분장애(우울/조울)",
+        "school": "인하대학교 의과대학",
+        "gradYear": 2009,
+        "training": "인하대학교병원 정신건강의학과 전공의/전임의",
+        "career": [
+          "우울·양극성장애 외래관리",
+          "낮병원 재활프로그램",
+          "대한우울조울병학회 회원"
+        ],
+        "reputation": 4.5,
+        "reviews": 134
+      }
+    ]
+  },
+  {
+    "id": "p9",
+    "name": "고양늘봄정신건강의학과병원",
+    "type": "정신병원",
+    "address": "경기도 고양시 덕양구 화중로 110",
+    "lat": 37.6358,
+    "lng": 126.8326,
+    "phone": "031-963-8275",
+    "beds": 200,
+    "er": false,
+    "erLevel": null,
+    "icu": false,
+    "parking": true,
+    "transit": "지하철 3호선 화정역 도보 8분",
+    "ambulanceBay": true,
+    "transferDesk": true,
+    "closedWard": true,
+    "inpatient": true,
+    "psychER": false,
+    "dayHospital": true,
+    "avgWaitMin": 24,
+    "specialties": [
+      "정신건강의학과"
+    ],
+    "doctors": [
+      {
+        "name": "문채원",
+        "title": "병원장",
+        "specialty": "정신건강의학과",
+        "subspecialty": "노인정신(치매/섬망)",
+        "school": "건국대학교 의과대학",
+        "gradYear": 2005,
+        "training": "건국대학교병원 정신건강의학과 전공의/전임의",
+        "career": [
+          "치매·행동심리증상(BPSD) 입원치료",
+          "노인 정신건강 방문진료",
+          "대한노인정신의학회 정회원"
         ],
         "reputation": 4.4,
         "reviews": 88
-      }
-    ]
-  },
-  {
-    "id": "h9",
-    "name": "서대문하트내과병원",
-    "type": "병원(내과전문)",
-    "address": "서울특별시 서대문구 통일로 230",
-    "lat": 37.5658,
-    "lng": 126.9398,
-    "phone": "02-360-0000",
-    "beds": 120,
-    "er": false,
-    "erLevel": null,
-    "icu": true,
-    "parking": false,
-    "transit": "지하철 3호선 무악재역 도보 5분",
-    "ambulanceBay": false,
-    "transferDesk": false,
-    "avgWaitMin": 14,
-    "specialties": [
-      "내과",
-      "가정의학과"
-    ],
-    "doctors": [
-      {
-        "name": "황선미",
-        "title": "원장",
-        "specialty": "내과",
-        "subspecialty": "내분비내과",
-        "school": "충남대학교 의과대학",
-        "gradYear": 2005,
-        "training": "삼성서울병원 내과 전공의/전임의",
-        "career": [
-          "당뇨·갑상선 클리닉",
-          "골다공증 관리",
-          "대한내분비학회 정회원"
-        ],
-        "reputation": 4.6,
-        "reviews": 147
       }
     ]
   }

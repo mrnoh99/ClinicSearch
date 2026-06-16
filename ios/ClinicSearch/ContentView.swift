@@ -207,9 +207,10 @@ struct ResultRow: View {
                 }
                 .font(.caption2).foregroundStyle(.secondary)
                 HStack(spacing: 6) {
-                    if h.er { tag("응급실", .red) }
-                    if h.icu { tag("중환자실", .purple) }
-                    if h.transferDesk { tag("전원코디", .green) }
+                    if h.psychER { tag("정신응급", .red) }
+                    if h.closedWard { tag("보호병동", .purple) }
+                    if h.inpatient { tag("입원가능", .blue) }
+                    if h.dayHospital { tag("낮병원", .green) }
                 }
             }
             Spacer()

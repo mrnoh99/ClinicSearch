@@ -1,0 +1,406 @@
+[
+  {
+    "id": "psy001", "name": "김현수", "hospitalId": "p1", "gender": "M",
+    "subspecialty": "조현병·정신증", "reputation": 4.6, "reviews": 142,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 1995 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2003-0457(예시)", "year": 2003, "authority": "보건복지부/대한의학회" },
+    "interests": ["조현병·정신증", "정신응급", "급성기 입원치료"],
+    "education": [
+      { "degree": "의학사", "school": "서울대학교 의과대학", "year": 1998 },
+      { "degree": "의학박사", "school": "서울대학교 대학원", "year": 2009, "thesis": "조현병 환자의 인지기능과 예후" }
+    ],
+    "training": [
+      { "role": "인턴", "hospital": "서울대학교병원", "startYear": 1998, "endYear": 1999 },
+      { "role": "레지던트", "hospital": "서울대학교병원 정신건강의학과", "startYear": 1999, "endYear": 2003 },
+      { "role": "전임의", "hospital": "서울대학교병원 정신건강의학과", "startYear": 2003, "endYear": 2005 }
+    ],
+    "positions": [
+      { "org": "국립서울정신건강병원", "title": "진료부장", "startYear": 2015, "current": true },
+      { "org": "서울대학교병원 정신건강의학과", "title": "임상교수", "startYear": 2005, "endYear": 2015, "current": false }
+    ],
+    "societies": [
+      { "name": "대한신경정신의학회", "role": "정회원" },
+      { "name": "대한조현병학회", "role": "이사" }
+    ],
+    "publications": [
+      { "title": "Cognitive function and long-term outcome in schizophrenia", "journal": "Journal of Korean Neuropsychiatric Association", "year": 2018, "role": "제1저자" }
+    ],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2006 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "국립서울정신건강병원 의료진 소개", "method": "기관 홈페이지 수집", "url": "https://www.ncmh.go.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "publications", "source": "KoreaMed / PubMed", "method": "저자명 검색", "url": "https://koreamed.org", "collectedAt": "2026-06-16", "confidence": "medium" },
+      { "field": "reputation", "source": "진료 후기 집계", "method": "리뷰 플랫폼 집계", "collectedAt": "2026-06-16", "confidence": "low" }
+    ]
+  },
+  {
+    "id": "psy002", "name": "이정민", "hospitalId": "p1", "gender": "F",
+    "subspecialty": "자살예방·정신응급", "reputation": 4.7, "reviews": 188,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2000 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2008-1123(예시)", "year": 2008, "authority": "보건복지부/대한의학회" },
+    "interests": ["정신응급", "자살위기개입", "재난정신건강"],
+    "education": [
+      { "degree": "의학사", "school": "연세대학교 의과대학", "year": 2003 },
+      { "degree": "의학석사", "school": "연세대학교 대학원", "year": 2010, "thesis": "응급실 내원 자살시도자의 임상특성" }
+    ],
+    "training": [
+      { "role": "인턴", "hospital": "세브란스병원", "startYear": 2003, "endYear": 2004 },
+      { "role": "레지던트", "hospital": "세브란스병원 정신건강의학과", "startYear": 2004, "endYear": 2008 },
+      { "role": "전임의", "hospital": "세브란스병원 정신건강의학과", "startYear": 2008, "endYear": 2010 }
+    ],
+    "positions": [
+      { "org": "국립서울정신건강병원", "title": "정신응급팀장", "startYear": 2018, "current": true }
+    ],
+    "societies": [
+      { "name": "대한신경정신의학회", "role": "정회원" },
+      { "name": "한국자살예방협회", "role": "회원" }
+    ],
+    "publications": [
+      { "title": "Clinical characteristics of suicide attempters in the emergency department", "journal": "Journal of Korean Medical Science", "year": 2016, "role": "공저자" }
+    ],
+    "certifications": [
+      { "name": "정신건강전문의(보건복지부)", "year": 2011 },
+      { "name": "자살예방 게이트키퍼 강사", "year": 2015 }
+    ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "국립서울정신건강병원 의료진 소개", "method": "기관 홈페이지 수집", "url": "https://www.ncmh.go.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "publications", "source": "KoreaMed / PubMed", "method": "저자명 검색", "collectedAt": "2026-06-16", "confidence": "medium" }
+    ]
+  },
+  {
+    "id": "psy003", "name": "박서진", "hospitalId": "p2", "gender": "M",
+    "subspecialty": "불안·공황장애", "reputation": 4.8, "reviews": 264,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2005 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2013-2210(예시)", "year": 2013, "authority": "보건복지부/대한의학회" },
+    "interests": ["공황장애", "사회불안장애", "인지행동치료(CBT)"],
+    "education": [
+      { "degree": "의학사", "school": "성균관대학교 의과대학", "year": 2008 }
+    ],
+    "training": [
+      { "role": "인턴", "hospital": "삼성서울병원", "startYear": 2008, "endYear": 2009 },
+      { "role": "레지던트", "hospital": "삼성서울병원 정신건강의학과", "startYear": 2009, "endYear": 2013 },
+      { "role": "전임의", "hospital": "삼성서울병원 정신건강의학과", "startYear": 2013, "endYear": 2014 }
+    ],
+    "positions": [
+      { "org": "마음편한신경정신과의원", "title": "원장", "startYear": 2016, "current": true },
+      { "org": "삼성서울병원 정신건강의학과", "title": "임상강사", "startYear": 2014, "endYear": 2016, "current": false }
+    ],
+    "societies": [
+      { "name": "대한불안의학회", "role": "회원" },
+      { "name": "대한인지행동치료학회", "role": "회원" }
+    ],
+    "publications": [
+      { "title": "CBT outcomes for panic disorder in primary psychiatric care", "journal": "Anxiety and Mood", "year": 2019, "role": "제1저자" }
+    ],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2016 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "의원 홈페이지 의료진 소개", "method": "기관 홈페이지 수집", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "reputation", "source": "진료 후기 집계", "method": "리뷰 플랫폼 집계", "collectedAt": "2026-06-16", "confidence": "low" }
+    ]
+  },
+  {
+    "id": "psy004", "name": "정유나", "hospitalId": "p3", "gender": "F",
+    "subspecialty": "기분장애(우울/조울)", "reputation": 4.5, "reviews": 131,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 1999 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2007-0912(예시)", "year": 2007, "authority": "보건복지부/대한의학회" },
+    "interests": ["난치성 우울증", "양극성장애", "전기경련치료(ECT)"],
+    "education": [
+      { "degree": "의학사", "school": "가톨릭대학교 의과대학", "year": 2002 },
+      { "degree": "의학박사", "school": "가톨릭대학교 대학원", "year": 2013, "thesis": "치료저항성 우울증의 ECT 반응 예측인자" }
+    ],
+    "training": [
+      { "role": "인턴", "hospital": "서울성모병원", "startYear": 2002, "endYear": 2003 },
+      { "role": "레지던트", "hospital": "서울성모병원 정신건강의학과", "startYear": 2003, "endYear": 2007 },
+      { "role": "전임의", "hospital": "서울성모병원 정신건강의학과", "startYear": 2007, "endYear": 2009 }
+    ],
+    "positions": [
+      { "org": "서울맑은정신건강의학과병원", "title": "병원장", "startYear": 2014, "current": true }
+    ],
+    "societies": [
+      { "name": "대한우울조울병학회", "role": "정회원" },
+      { "name": "대한신경정신의학회", "role": "정회원" }
+    ],
+    "publications": [
+      { "title": "Predictors of ECT response in treatment-resistant depression", "journal": "Journal of Affective Disorders", "year": 2015, "role": "제1저자" }
+    ],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2010 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "publications", "source": "PubMed", "method": "저자명 검색", "url": "https://pubmed.ncbi.nlm.nih.gov", "collectedAt": "2026-06-16", "confidence": "medium" }
+    ]
+  },
+  {
+    "id": "psy005", "name": "한지호", "hospitalId": "p3", "gender": "M",
+    "subspecialty": "노인정신(치매/섬망)", "reputation": 4.4, "reviews": 97,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2004 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2012-1745(예시)", "year": 2012, "authority": "보건복지부/대한의학회" },
+    "interests": ["노인우울", "치매 행동심리증상(BPSD)", "섬망"],
+    "education": [ { "degree": "의학사", "school": "한양대학교 의과대학", "year": 2007 } ],
+    "training": [
+      { "role": "인턴", "hospital": "한양대학교병원", "startYear": 2007, "endYear": 2008 },
+      { "role": "레지던트", "hospital": "한양대학교병원 정신건강의학과", "startYear": 2008, "endYear": 2012 }
+    ],
+    "positions": [
+      { "org": "서울맑은정신건강의학과병원", "title": "과장", "startYear": 2015, "current": true }
+    ],
+    "societies": [ { "name": "대한노인정신의학회", "role": "회원" } ],
+    "publications": [],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2015 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "병원 홈페이지 의료진 소개", "method": "기관 홈페이지 수집", "collectedAt": "2026-06-16", "confidence": "high" }
+    ]
+  },
+  {
+    "id": "psy006", "name": "오하늘", "hospitalId": "p4", "gender": "F",
+    "subspecialty": "소아청소년정신", "reputation": 4.7, "reviews": 203,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2006 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2014-2588(예시)", "year": 2014, "authority": "보건복지부/대한의학회" },
+    "interests": ["ADHD", "틱장애", "소아청소년 우울·불안"],
+    "education": [ { "degree": "의학사", "school": "이화여자대학교 의과대학", "year": 2009 } ],
+    "training": [
+      { "role": "인턴", "hospital": "이대목동병원", "startYear": 2009, "endYear": 2010 },
+      { "role": "레지던트", "hospital": "이대목동병원 정신건강의학과", "startYear": 2010, "endYear": 2014 },
+      { "role": "전임의", "hospital": "서울대학교어린이병원 소아청소년정신", "startYear": 2014, "endYear": 2016 }
+    ],
+    "positions": [
+      { "org": "새봄소아청소년정신건강의학과의원", "title": "원장", "startYear": 2018, "current": true }
+    ],
+    "societies": [ { "name": "대한소아청소년정신의학회", "role": "회원" } ],
+    "publications": [
+      { "title": "ADHD 아동의 실행기능과 학업성취", "journal": "소아청소년정신의학", "year": 2017, "role": "제1저자" }
+    ],
+    "certifications": [
+      { "name": "정신건강전문의(보건복지부)", "year": 2017 },
+      { "name": "소아청소년정신의학 인증의", "year": 2017 }
+    ],
+    "sources": [
+      { "field": "boardCert", "source": "대한소아청소년정신의학회 명부", "method": "학회 명부 조회", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "training", "source": "수련기관 전공의 이력", "method": "기관 자료 확인", "collectedAt": "2026-06-16", "confidence": "medium" }
+    ]
+  },
+  {
+    "id": "psy007", "name": "신동욱", "hospitalId": "p5", "gender": "M",
+    "subspecialty": "중독(알코올/도박/게임)", "reputation": 4.5, "reviews": 116,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 1998 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2006-0633(예시)", "year": 2006, "authority": "보건복지부/대한의학회" },
+    "interests": ["알코올 중독", "도박·게임 중독", "중독 재활"],
+    "education": [
+      { "degree": "의학사", "school": "중앙대학교 의과대학", "year": 2001 },
+      { "degree": "의학박사", "school": "중앙대학교 대학원", "year": 2014, "thesis": "알코올사용장애의 재발 예측요인" }
+    ],
+    "training": [
+      { "role": "인턴", "hospital": "중앙대학교병원", "startYear": 2001, "endYear": 2002 },
+      { "role": "레지던트", "hospital": "중앙대학교병원 정신건강의학과", "startYear": 2002, "endYear": 2006 }
+    ],
+    "positions": [
+      { "org": "한울중독정신건강의학과병원", "title": "병원장", "startYear": 2013, "current": true }
+    ],
+    "societies": [
+      { "name": "한국중독정신의학회", "role": "정회원" },
+      { "name": "대한신경정신의학회", "role": "정회원" }
+    ],
+    "publications": [
+      { "title": "Relapse predictors in alcohol use disorder", "journal": "Journal of Korean Academy of Addiction Psychiatry", "year": 2016, "role": "제1저자" }
+    ],
+    "certifications": [
+      { "name": "정신건강전문의(보건복지부)", "year": 2009 },
+      { "name": "중독전문의(한국중독정신의학회)", "year": 2010 }
+    ],
+    "sources": [
+      { "field": "boardCert", "source": "한국중독정신의학회 명부", "method": "학회 명부 조회", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "병원 홈페이지", "method": "기관 홈페이지 수집", "collectedAt": "2026-06-16", "confidence": "high" }
+    ]
+  },
+  {
+    "id": "psy008", "name": "윤소희", "hospitalId": "p6", "gender": "F",
+    "subspecialty": "수면의학", "reputation": 4.6, "reviews": 158,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2007 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2015-2901(예시)", "year": 2015, "authority": "보건복지부/대한의학회" },
+    "interests": ["불면증", "수면다원검사", "일주기리듬장애"],
+    "education": [ { "degree": "의학사", "school": "고려대학교 의과대학", "year": 2010 } ],
+    "training": [
+      { "role": "인턴", "hospital": "고려대학교안암병원", "startYear": 2010, "endYear": 2011 },
+      { "role": "레지던트", "hospital": "고려대학교안암병원 정신건강의학과", "startYear": 2011, "endYear": 2015 },
+      { "role": "전임의", "hospital": "고려대학교안암병원 수면의학", "startYear": 2015, "endYear": 2016 }
+    ],
+    "positions": [
+      { "org": "연세마음정신건강의학과의원", "title": "원장", "startYear": 2018, "current": true }
+    ],
+    "societies": [ { "name": "대한수면의학회", "role": "회원" } ],
+    "publications": [
+      { "title": "Efficacy of CBT-I in chronic insomnia", "journal": "Sleep Medicine and Psychophysiology", "year": 2018, "role": "제1저자" }
+    ],
+    "certifications": [
+      { "name": "정신건강전문의(보건복지부)", "year": 2018 },
+      { "name": "수면전문의(대한수면의학회)", "year": 2019 }
+    ],
+    "sources": [
+      { "field": "boardCert", "source": "대한수면의학회 명부", "method": "학회 명부 조회", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "publications", "source": "KoreaMed", "method": "저자명 검색", "collectedAt": "2026-06-16", "confidence": "medium" }
+    ]
+  },
+  {
+    "id": "psy009", "name": "강민재", "hospitalId": "p7", "gender": "M",
+    "subspecialty": "조현병·정신증", "reputation": 4.6, "reviews": 149,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2001 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2009-1388(예시)", "year": 2009, "authority": "보건복지부/대한의학회" },
+    "interests": ["초발 정신증", "조기중재", "급성기 보호병동"],
+    "education": [
+      { "degree": "의학사", "school": "울산대학교 의과대학", "year": 2004 },
+      { "degree": "의학박사", "school": "울산대학교 대학원", "year": 2016, "thesis": "초발 정신증의 조기중재 효과" }
+    ],
+    "training": [
+      { "role": "인턴", "hospital": "서울아산병원", "startYear": 2004, "endYear": 2005 },
+      { "role": "레지던트", "hospital": "서울아산병원 정신건강의학과", "startYear": 2005, "endYear": 2009 },
+      { "role": "전임의", "hospital": "서울아산병원 정신건강의학과", "startYear": 2009, "endYear": 2011 }
+    ],
+    "positions": [
+      { "org": "분당온정신건강의학과병원", "title": "병원장", "startYear": 2015, "current": true }
+    ],
+    "societies": [
+      { "name": "대한조현병학회", "role": "정회원" },
+      { "name": "대한신경정신의학회", "role": "정회원" }
+    ],
+    "publications": [
+      { "title": "Early intervention in first-episode psychosis", "journal": "Psychiatry Investigation", "year": 2017, "role": "제1저자" }
+    ],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2012 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "병원 홈페이지", "method": "기관 홈페이지 수집", "collectedAt": "2026-06-16", "confidence": "high" }
+    ]
+  },
+  {
+    "id": "psy010", "name": "임가은", "hospitalId": "p7", "gender": "F",
+    "subspecialty": "강박·외상(PTSD)", "reputation": 4.7, "reviews": 121,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2008 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2016-3055(예시)", "year": 2016, "authority": "보건복지부/대한의학회" },
+    "interests": ["외상후스트레스장애(PTSD)", "강박장애", "EMDR"],
+    "education": [ { "degree": "의학사", "school": "경희대학교 의과대학", "year": 2011 } ],
+    "training": [
+      { "role": "인턴", "hospital": "경희대학교병원", "startYear": 2011, "endYear": 2012 },
+      { "role": "레지던트", "hospital": "경희대학교병원 정신건강의학과", "startYear": 2012, "endYear": 2016 }
+    ],
+    "positions": [
+      { "org": "분당온정신건강의학과병원", "title": "과장", "startYear": 2018, "current": true }
+    ],
+    "societies": [ { "name": "대한정신건강의학회", "role": "회원" }, { "name": "한국EMDR협회", "role": "회원" } ],
+    "publications": [],
+    "certifications": [
+      { "name": "정신건강전문의(보건복지부)", "year": 2019 },
+      { "name": "EMDR 임상가 인증", "year": 2018 }
+    ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "certifications", "source": "한국EMDR협회 인증자 명단", "method": "협회 명단 조회", "collectedAt": "2026-06-16", "confidence": "medium" }
+    ]
+  },
+  {
+    "id": "psy011", "name": "조은별", "hospitalId": "p8", "gender": "F",
+    "subspecialty": "기분장애(우울/조울)", "reputation": 4.5, "reviews": 134,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2006 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2014-2477(예시)", "year": 2014, "authority": "보건복지부/대한의학회" },
+    "interests": ["우울장애", "양극성장애", "낮병원 재활"],
+    "education": [ { "degree": "의학사", "school": "인하대학교 의과대학", "year": 2009 } ],
+    "training": [
+      { "role": "인턴", "hospital": "인하대학교병원", "startYear": 2009, "endYear": 2010 },
+      { "role": "레지던트", "hospital": "인하대학교병원 정신건강의학과", "startYear": 2010, "endYear": 2014 },
+      { "role": "전임의", "hospital": "인하대학교병원 정신건강의학과", "startYear": 2014, "endYear": 2015 }
+    ],
+    "positions": [
+      { "org": "인천나래정신건강의학과의원", "title": "원장", "startYear": 2017, "current": true }
+    ],
+    "societies": [ { "name": "대한우울조울병학회", "role": "회원" } ],
+    "publications": [],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2017 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "의원 홈페이지", "method": "기관 홈페이지 수집", "collectedAt": "2026-06-16", "confidence": "high" }
+    ]
+  },
+  {
+    "id": "psy012", "name": "문채원", "hospitalId": "p9", "gender": "F",
+    "subspecialty": "노인정신(치매/섬망)", "reputation": 4.4, "reviews": 88,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2002 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2010-1502(예시)", "year": 2010, "authority": "보건복지부/대한의학회" },
+    "interests": ["치매 BPSD", "노인우울", "방문진료"],
+    "education": [
+      { "degree": "의학사", "school": "건국대학교 의과대학", "year": 2005 },
+      { "degree": "의학박사", "school": "건국대학교 대학원", "year": 2017, "thesis": "치매 환자의 행동심리증상 관리" }
+    ],
+    "training": [
+      { "role": "인턴", "hospital": "건국대학교병원", "startYear": 2005, "endYear": 2006 },
+      { "role": "레지던트", "hospital": "건국대학교병원 정신건강의학과", "startYear": 2006, "endYear": 2010 }
+    ],
+    "positions": [
+      { "org": "고양늘봄정신건강의학과병원", "title": "병원장", "startYear": 2014, "current": true }
+    ],
+    "societies": [ { "name": "대한노인정신의학회", "role": "정회원" } ],
+    "publications": [
+      { "title": "Management of BPSD in dementia inpatients", "journal": "Journal of Korean Geriatric Psychiatry", "year": 2018, "role": "제1저자" }
+    ],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2013 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한노인정신의학회 명부", "method": "학회 명부 조회", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "publications", "source": "KoreaMed", "method": "저자명 검색", "collectedAt": "2026-06-16", "confidence": "medium" }
+    ]
+  },
+  {
+    "id": "psy013", "name": "배수민", "hospitalId": "p10", "gender": "M",
+    "subspecialty": "정신신체의학", "reputation": 4.6, "reviews": 119,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2005 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2013-2188(예시)", "year": 2013, "authority": "보건복지부/대한의학회" },
+    "interests": ["화병", "스트레스성 신체증상", "만성통증 협진"],
+    "education": [ { "degree": "의학사", "school": "부산대학교 의과대학", "year": 2008 } ],
+    "training": [
+      { "role": "인턴", "hospital": "분당서울대학교병원", "startYear": 2008, "endYear": 2009 },
+      { "role": "레지던트", "hospital": "분당서울대학교병원 정신건강의학과", "startYear": 2009, "endYear": 2013 },
+      { "role": "전임의", "hospital": "분당서울대학교병원 정신건강의학과", "startYear": 2013, "endYear": 2015 }
+    ],
+    "positions": [
+      { "org": "강북힐링정신건강의학과의원", "title": "원장", "startYear": 2017, "current": true }
+    ],
+    "societies": [ { "name": "대한정신신체의학회", "role": "회원" } ],
+    "publications": [],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2016 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "의원 홈페이지", "method": "기관 홈페이지 수집", "collectedAt": "2026-06-16", "confidence": "high" }
+    ]
+  },
+  {
+    "id": "psy014", "name": "서지안", "hospitalId": "p11", "gender": "F",
+    "subspecialty": "자살예방·정신응급", "reputation": 4.7, "reviews": 176,
+    "license": { "type": "의사면허", "no": "제00000호(예시)", "year": 2000 },
+    "boardCert": { "specialty": "정신건강의학과", "certNo": "정신-2008-1099(예시)", "year": 2008, "authority": "보건복지부/대한의학회" },
+    "interests": ["정신응급 협진", "자살시도자 사후관리", "응급실 정신건강"],
+    "education": [
+      { "degree": "의학사", "school": "아주대학교 의과대학", "year": 2003 },
+      { "degree": "의학박사", "school": "아주대학교 대학원", "year": 2014, "thesis": "응급실 기반 자살예방 사례관리의 효과" }
+    ],
+    "training": [
+      { "role": "인턴", "hospital": "아주대학교병원", "startYear": 2003, "endYear": 2004 },
+      { "role": "레지던트", "hospital": "아주대학교병원 정신건강의학과", "startYear": 2004, "endYear": 2008 },
+      { "role": "전임의", "hospital": "아주대학교병원 정신건강의학과", "startYear": 2008, "endYear": 2010 }
+    ],
+    "positions": [
+      { "org": "수원중앙대학교병원 정신건강의학과", "title": "교수", "startYear": 2012, "current": true }
+    ],
+    "societies": [
+      { "name": "대한신경정신의학회", "role": "정회원" },
+      { "name": "한국자살예방협회", "role": "이사" }
+    ],
+    "publications": [
+      { "title": "Effectiveness of ED-based case management for suicide attempters", "journal": "Journal of Korean Medical Science", "year": 2019, "role": "제1저자" }
+    ],
+    "certifications": [ { "name": "정신건강전문의(보건복지부)", "year": 2011 } ],
+    "sources": [
+      { "field": "boardCert", "source": "대한신경정신의학회 전문의 명부", "method": "학회 명부 조회", "url": "https://www.knpa.or.kr", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "positions", "source": "대학병원 의료진 소개", "method": "기관 홈페이지 수집", "collectedAt": "2026-06-16", "confidence": "high" },
+      { "field": "publications", "source": "PubMed", "method": "저자명 검색", "url": "https://pubmed.ncbi.nlm.nih.gov", "collectedAt": "2026-06-16", "confidence": "medium" }
+    ]
+  }
+]

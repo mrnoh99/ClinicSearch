@@ -5,7 +5,12 @@
 (function () {
   "use strict";
 
-  const { SPECIALTIES, HOSPITALS } = window.APP_DATA;
+  const { SPECIALTIES, HOSPITALS, SPECIALISTS = [] } = window.APP_DATA;
+
+  // 이름 + 소속병원으로 전문의 통합 프로필 조회
+  function findSpecialist(name, hospitalId) {
+    return SPECIALISTS.find((s) => s.name === name && s.hospitalId === hospitalId);
+  }
 
   /* ---------------------------- 상태 ---------------------------- */
   const state = {
@@ -81,12 +86,16 @@
     // 거리 점수: 0km=45점, 30km=0점 (선형)
     const distScore = Math.max(0, 45 * (1 - Math.min(km, 30) / 30));
 
-    // 인프라 점수
+    // 인프라 점수 (정신과 전원: 폐쇄/보호병동·입원 가능·정신응급이 가장 중요)
     let infra = 0;
-    if (h.er) infra += 10;
-    if (h.erLevel === "권역응급의료센터") infra += 6;
-    else if (h.erLevel === "지역응급의료센터") infra += 3;
-    if (h.icu) infra += 9;
+    if (h.closedWard) infra += 9;   // 폐쇄/보호병동 (응급·비자의 입원 전원 핵심)
+    if (h.inpatient) infra += 6;    // 정신과 입원 가능
+    if (h.psychER) infra += 6;      // 정신응급 대응
+    if (h.dayHospital) infra += 2;  // 낮병원
+    if (h.er) infra += 3;           // 일반 응급실(종합병원 정신과 등)
+    if (h.erLevel === "권역응급의료센터") infra += 3;
+    else if (h.erLevel === "지역응급의료센터") infra += 2;
+    if (h.icu) infra += 2;
     infra = Math.min(infra, 25);
 
     // 접근성 점수
@@ -198,8 +207,9 @@
     el.list.innerHTML = state.results
       .map((h, i) => {
         const top = i === 0 ? badge("최적 전원지", "best") : "";
-        const er = h.er ? badge("응급실", "er") : "";
-        const icu = h.icu ? badge("중환자실", "icu") : "";
+        const ward = h.closedWard ? badge("보호병동", "icu") : "";
+        const inp = h.inpatient ? badge("입원가능", "lvl") : "";
+        const pem = h.psychER ? badge("정신응급", "er") : "";
         return `
         <li class="card ${state.selectedId === h.id ? "active" : ""}" data-id="${h.id}" tabindex="0" role="button">
           <div class="card-head">
@@ -218,7 +228,7 @@
             <span>🛏 ${h.beds}병상</span>
             <span>⏱ 대기 ${h.avgWaitMin}분</span>
           </div>
-          <div class="badges">${er}${icu}${h.erLevel ? badge(h.erLevel, "lvl") : ""}${h.transferDesk ? badge("전원코디", "co") : ""}</div>
+          <div class="badges">${pem}${ward}${inp}${h.dayHospital ? badge("낮병원", "co") : ""}${h.transferDesk ? badge("전원코디", "co") : ""}</div>
         </li>`;
       })
       .join("");
@@ -264,22 +274,19 @@
       return;
     }
     const docs = h.doctors
-      .map(
-        (d) => `
+      .map((d) => {
+        const sp = findSpecialist(d.name, h.id);
+        return `
       <div class="doctor">
         <img class="doc-photo" src="${avatarSVG(d.name, d.name)}" alt="${d.name}"/>
         <div class="doc-info">
           <div class="doc-name">${d.name} <span class="doc-title">${d.title}</span></div>
           <div class="doc-spec">${d.specialty}${d.subspecialty ? " · " + d.subspecialty : ""}</div>
           <div class="rep">${stars(d.reputation)} <span class="muted">${d.reputation.toFixed(1)} (${d.reviews}건)</span></div>
-          <ul class="doc-meta">
-            <li>🎓 ${d.school} (${d.gradYear}년 졸업)</li>
-            <li>🏥 수련: ${d.training}</li>
-            ${d.career.map((c) => `<li>• ${c}</li>`).join("")}
-          </ul>
+          ${sp ? specialistProfile(sp) : fallbackProfile(d)}
         </div>
-      </div>`
-      )
+      </div>`;
+      })
       .join("");
 
     const naverUrl = `https://map.naver.com/v5/search/${encodeURIComponent(h.name)}`;
@@ -296,17 +303,22 @@
         <div><span>주소</span>${h.address}</div>
         <div><span>전화</span><a href="tel:${h.phone}">${h.phone}</a></div>
         <div><span>거리</span>${h.km ? h.km.toFixed(1) + " km · 약 " + h.driveMin + "분" : "-"}</div>
-        <div><span>병상</span>${h.beds}병상</div>
-        <div><span>응급</span>${h.er ? (h.erLevel || "응급실 운영") : "응급실 없음"}</div>
-        <div><span>중환자실</span>${h.icu ? "운영" : "없음"}</div>
+        <div><span>병상</span>${h.beds ? h.beds + "병상" : "외래(입원 없음)"}</div>
+        <div><span>입원</span>${h.inpatient ? "정신과 입원 가능" : "외래 전용"}</div>
+        <div><span>보호병동</span>${h.closedWard ? "운영(폐쇄/보호병동)" : "없음"}</div>
+        <div><span>정신응급</span>${h.psychER ? "24시간 대응" : (h.er ? "응급실 연계" : "없음")}</div>
+        <div><span>낮병원</span>${h.dayHospital ? "운영" : "없음"}</div>
         <div><span>교통</span>${h.transit || "-"}</div>
         <div><span>주차</span>${h.parking ? "가능" : "불가"}</div>
       </div>
       <div class="transfer-box">
-        <div class="transfer-title">전원 접근성</div>
+        <div class="transfer-title">정신과 전원 접근성</div>
         <div class="badges">
-          ${h.ambulanceBay ? badge("구급차 전용 진입로", "co") : ""}
-          ${h.transferDesk ? badge("전원 전담 코디네이터", "co") : ""}
+          ${h.closedWard ? badge("폐쇄/보호병동", "icu") : ""}
+          ${h.inpatient ? badge("입원가능", "lvl") : ""}
+          ${h.psychER ? badge("정신응급", "er") : ""}
+          ${h.ambulanceBay ? badge("구급차 진입로", "co") : ""}
+          ${h.transferDesk ? badge("전원 코디네이터", "co") : ""}
           ${badge("평균 대기 " + h.avgWaitMin + "분", "lvl")}
           ${badge("적합도 " + (h.score || transferScore(h, h.km || 0)) + "점", "best")}
         </div>
@@ -323,6 +335,51 @@
   function stars(r) {
     const full = Math.round(r);
     return "★★★★★☆☆☆☆☆".slice(5 - full, 10 - full);
+  }
+
+  // 요약 데이터만 있을 때(통합 프로필 없음)
+  function fallbackProfile(d) {
+    return `<ul class="doc-meta">
+      <li>🎓 ${d.school} (${d.gradYear}년 졸업)</li>
+      <li>🏥 수련: ${d.training}</li>
+      ${d.career.map((c) => `<li>• ${c}</li>`).join("")}
+    </ul>`;
+  }
+
+  // 전문의 통합 프로필 (학력·수련·경력·학회·논문·자격 + 출처)
+  function specialistProfile(s) {
+    const edu = (s.education || [])
+      .map((e) => `${e.school} ${e.degree}(${e.year})`).join(", ");
+    const tr = (s.training || [])
+      .map((t) => `${t.role}·${t.hospital}`).join(" → ");
+    const pos = (s.positions || [])
+      .map((p) => `${p.org} ${p.title}${p.is_current ? "(현)" : ""}`).join(", ");
+    const soc = (s.societies || [])
+      .map((x) => `${x.name}${x.role ? "(" + x.role + ")" : ""}`).join(", ");
+    const pubs = (s.publications || [])
+      .map((p) => `${p.title} <span class="muted">— ${p.journal}, ${p.year}</span>`).join("<br>");
+    const certs = (s.certifications || []).map((c) => `${c.name}(${c.year})`).join(", ");
+    const bc = s.boardCert || {};
+    const srcCount = (s.sources || []).length;
+    const srcList = (s.sources || [])
+      .map((x) => `<li class="src src-${x.confidence}">[${x.field}] ${x.source} · ${x.method}${x.url ? ` <a href="${x.url}" target="_blank" rel="noopener">↗</a>` : ""}</li>`)
+      .join("");
+
+    return `
+      <ul class="doc-meta">
+        <li>🪪 전문의: 정신건강의학과 ${bc.year ? `(${bc.year} 취득${bc.certNo ? " · " + bc.certNo : ""})` : ""}</li>
+        ${edu ? `<li>🎓 ${edu}</li>` : ""}
+        ${tr ? `<li>🏥 수련: ${tr}</li>` : ""}
+        ${pos ? `<li>💼 경력: ${pos}</li>` : ""}
+        ${soc ? `<li>👥 학회: ${soc}</li>` : ""}
+        ${certs ? `<li>📜 자격: ${certs}</li>` : ""}
+        ${(s.interests || []).length ? `<li>🔎 관심분야: ${s.interests.join(", ")}</li>` : ""}
+        ${pubs ? `<li>📄 논문: ${pubs}</li>` : ""}
+      </ul>
+      <details class="sources">
+        <summary>📚 자료 출처 ${srcCount}건 (수집 방법·신뢰도)</summary>
+        <ul class="src-list">${srcList}</ul>
+      </details>`;
   }
 
   function selectHospital(id) {

@@ -28,11 +28,16 @@ def haversine(lat1, lng1, lat2, lng2):
 
 def transfer_score(h, km):
     dist = max(0, 45 * (1 - min(km, 30) / 30))
+    # 정신과 전원: 폐쇄/보호병동·입원 가능·정신응급을 핵심으로 반영
     infra = 0
-    if h["er"]: infra += 10
-    if h["er_level"] == "권역응급의료센터": infra += 6
-    elif h["er_level"] == "지역응급의료센터": infra += 3
-    if h["icu"]: infra += 9
+    if h["closed_ward"]: infra += 9
+    if h["inpatient"]: infra += 6
+    if h["psych_er"]: infra += 6
+    if h["day_hospital"]: infra += 2
+    if h["er"]: infra += 3
+    if h["er_level"] == "권역응급의료센터": infra += 3
+    elif h["er_level"] == "지역응급의료센터": infra += 2
+    if h["icu"]: infra += 2
     infra = min(infra, 25)
     access = 0
     if h["ambulance_bay"]: access += 6
@@ -91,8 +96,10 @@ def main():
     for i, (score, km, h) in enumerate(results[:args.limit], 1):
         drive = round(km / 28 * 60)
         flags = []
-        if h["er"]: flags.append(h["er_level"] or "응급실")
-        if h["icu"]: flags.append("중환자실")
+        if h["closed_ward"]: flags.append("폐쇄/보호병동")
+        if h["inpatient"]: flags.append("입원가능")
+        if h["psych_er"]: flags.append("정신응급")
+        if h["day_hospital"]: flags.append("낮병원")
         if h["transfer_desk"]: flags.append("전원코디")
         print(f"#{i}  [{score:3d}점] {h['name']}  ({h['type']})")
         print(f"      {km:5.1f} km · 약 {drive}분 · {h['beds']}병상 · 대기 {h['avg_wait_min']}분")

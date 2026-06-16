@@ -3,6 +3,9 @@
 병원·의료진 데이터를 **수집(ETL)** 하고 정규화된 **SQLite DB**로 관리한 뒤,
 웹앱·iOS앱·API가 공유하는 단일 진실 공급원(single source of truth)으로 사용합니다.
 
+> **현재 범위:** 정신건강의학과(정신과·신경정신과) 한정. 전문의(專門醫)를 중심 엔티티로
+> 학력·수련·경력·학회·논문·자격을 통합하고, 각 자료의 **수집 출처(provenance)** 를 함께 기록합니다.
+
 ```
             ┌────────────────────┐
  외부 API → │  ingest_*.py (ETL) │ → SQLite(clinicsearch.db)
@@ -16,12 +19,50 @@
 
 | 파일 | 설명 |
 |------|------|
-| `schema.sql` | 정규화 스키마(병원·의료진·전문과목·세부전공·경력·매핑) + 인덱스 + 뷰 |
-| `seed/hospitals.json`, `seed/specialties.json` | 기본/수기 시드 데이터(단일 진실 공급원의 시작점) |
-| `build_db.py` | 시드/DB → SQLite 빌드 후 `js/data.js`·`db/export/hospitals.json` 내보내기 |
+| `schema.sql` | 정규화 스키마(병원·전문의·학력·수련·경력·학회·논문·자격·출처) + 인덱스 + 뷰 |
+| `seed/hospitals.json`, `seed/specialties.json` | 정신과 의료기관·세부전공 시드 |
+| `seed/psychiatrists.json` | **정신과 전문의 통합 프로필**(사람 + 연결자료 + 출처) 시드 |
+| `build_db.py` | 시드/DB → SQLite 빌드 후 `js/data.js`·`ios/.../HospitalData.swift`·`db/export/*.json` 생성 |
 | `scripts/ingest_hira.py` | 심평원(HIRA) 병원정보서비스 수집 → `hospital` upsert |
 | `scripts/ingest_egen.py` | 응급의료포털(E-Gen) 응급실/중환자실 정보 보강 |
+| `scripts/ingest_specialists.py` | **전문의 자료 멀티소스 수집**(학회 명부·기관 홈페이지·PubMed 등) + 출처 기록 |
 | `scripts/query.py` | DB 기반 전원 병원 검색 데모(앱과 동일 점수 로직) |
+
+### 전문의(專門醫) 통합 모델
+
+사람을 중심으로 연결된 모든 자료를 정규화하여 저장하고, `data_source` 테이블에
+필드 단위로 **무엇을 / 어디서 / 어떤 방법으로 / 얼마나 신뢰**해 수집했는지 기록합니다.
+
+| 테이블 | 내용 |
+|--------|------|
+| `specialist` | 전문의 핵심(면허·전문의 자격·소속·세부전공·평판) |
+| `specialist_education` | 학력(의학사/석사/박사) |
+| `specialist_training` | 수련(인턴/레지던트/전임의) |
+| `specialist_position` | 경력/직위(현직 포함) |
+| `specialist_society` | 학회 회원/임원 |
+| `specialist_publication` | 논문/연구 |
+| `specialist_certification` | 추가 자격/인증 |
+| `specialist_interest` | 관심분야 |
+| `data_source` | **출처(provenance)** — 필드별 출처·수집방법·URL·신뢰도 |
+| `v_specialist_full` | 전문의 + 소속병원 + 논문/학회/출처 수 집계 뷰 |
+
+수집 방법(가능한 모든 출처) 매핑:
+
+- **전문의 자격/소속** ← 대한신경정신의학회(KNPA) 전문의 명부, 보건복지부 면허
+- **근무기관/직위** ← 의료기관 홈페이지 의료진 소개, HIRA 병원별 의사 정보
+- **논문/연구** ← PubMed E-utilities, KoreaMed, RISS (저자명·소속 매칭)
+- **세부 자격/인증** ← 세부 학회(중독/수면/소아청소년/EMDR 등) 인증자 명단
+- **평판/후기** ← 병원 리뷰 집계(이용약관 준수)
+
+```bash
+# 전문의 논문을 PubMed에서 수집해 특정 전문의에 연결(+출처 자동 기록)
+python3 db/scripts/ingest_specialists.py --db db/clinicsearch.db \
+        --pubmed "김현수" --affil "psychiatry" --specialist-id psy001
+```
+
+> 동명이인 구분을 위해 (이름 + 면허번호/소속기관 + 졸업학교)로 엔티티를 정합합니다.
+> 모든 수집은 출처별 이용약관·로봇정책·개인정보 보호를 준수해야 합니다.
+> 현재 시드의 면허/자격번호는 예시값이며, 실데이터로 교체해야 합니다.
 
 > 별도 패키지 설치가 필요 없습니다. Python 표준 라이브러리(sqlite3)만 사용합니다.
 

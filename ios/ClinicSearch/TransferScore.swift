@@ -26,12 +26,16 @@ enum TransferScore {
         // 거리: 0km=45점, 30km=0점
         let distScore = max(0, 45 * (1 - min(km, 30) / 30))
 
-        // 인프라
+        // 인프라 (정신과 전원: 폐쇄/보호병동·입원 가능·정신응급을 핵심으로 반영)
         var infra = 0.0
-        if h.er { infra += 10 }
-        if h.erLevel == "권역응급의료센터" { infra += 6 }
-        else if h.erLevel == "지역응급의료센터" { infra += 3 }
-        if h.icu { infra += 9 }
+        if h.closedWard { infra += 9 }
+        if h.inpatient { infra += 6 }
+        if h.psychER { infra += 6 }
+        if h.dayHospital { infra += 2 }
+        if h.er { infra += 3 }
+        if h.erLevel == "권역응급의료센터" { infra += 3 }
+        else if h.erLevel == "지역응급의료센터" { infra += 2 }
+        if h.icu { infra += 2 }
         infra = min(infra, 25)
 
         // 접근성

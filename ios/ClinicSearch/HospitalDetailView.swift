@@ -43,9 +43,11 @@ struct HospitalDetailView: View {
         LazyVGrid(columns: [GridItem(.flexible(), alignment: .leading),
                             GridItem(.flexible(), alignment: .leading)], spacing: 10) {
             fact("거리", String(format: "%.1f km · 약 %d분", scored.distanceKm, scored.driveMin))
-            fact("병상", "\(h.beds)병상")
-            fact("응급", h.er ? (h.erLevel ?? "응급실 운영") : "응급실 없음")
-            fact("중환자실", h.icu ? "운영" : "없음")
+            fact("병상", h.beds > 0 ? "\(h.beds)병상" : "외래(입원 없음)")
+            fact("입원", h.inpatient ? "정신과 입원 가능" : "외래 전용")
+            fact("보호병동", h.closedWard ? "운영(폐쇄/보호병동)" : "없음")
+            fact("정신응급", h.psychER ? "24시간 대응" : (h.er ? "응급실 연계" : "없음"))
+            fact("낮병원", h.dayHospital ? "운영" : "없음")
             fact("교통", h.transit)
             fact("주차", h.parking ? "가능" : "불가")
         }
@@ -60,10 +62,11 @@ struct HospitalDetailView: View {
 
     private var transferBox: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("전원 접근성").font(.caption.bold()).foregroundStyle(.secondary)
+            Text("정신과 전원 접근성").font(.caption.bold()).foregroundStyle(.secondary)
             HStack {
-                if h.ambulanceBay { chip("구급차 전용 진입로", .green) }
-                if h.transferDesk { chip("전원 전담 코디네이터", .green) }
+                if h.closedWard { chip("폐쇄/보호병동", .purple) }
+                if h.psychER { chip("정신응급", .red) }
+                if h.transferDesk { chip("전원 코디", .green) }
                 chip("적합도 \(scored.score)점", .orange)
             }
         }

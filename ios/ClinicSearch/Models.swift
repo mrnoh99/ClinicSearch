@@ -34,6 +34,11 @@ struct Hospital: Identifiable, Hashable {
     let ambulanceBay: Bool     // 구급차 전용 진입로
     let transferDesk: Bool     // 전원 전담 코디네이터
     let avgWaitMin: Int
+    // 정신건강의학과 전원 전용 속성
+    let closedWard: Bool       // 폐쇄/보호병동 운영
+    let inpatient: Bool        // 정신과 입원 가능
+    let psychER: Bool          // 정신응급 대응
+    let dayHospital: Bool      // 낮병원 운영
     let specialties: [String]
     let doctors: [Doctor]
 
